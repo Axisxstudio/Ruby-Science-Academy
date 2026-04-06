@@ -119,19 +119,20 @@ export function GallerySection({ items }: GallerySectionProps) {
         {/* Full-bleed edge-to-edge swiper */}
         <div className="relative -mx-4 sm:-mx-6 lg:-mx-12 px-4 sm:px-6 lg:px-12 overflow-visible">
           <Swiper
-            modules={[Autoplay]}
             slidesPerView="auto"
             spaceBetween={20}
             loop={true}
-            speed={1000}
+            speed={10000}
             grabCursor={true}
             autoplay={{
-              delay: 3000,
+              delay: 0,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
-              reverseDirection: true,
+              reverseDirection: false,
             }}
-            className="py-4"
+            freeMode={true}
+            modules={[Autoplay, FreeMode]}
+            className="py-4 marquee-swiper"
           >
             {/* Duplicating items to guarantee infinite loop works even if there are very few photos */}
             {[...items, ...items, ...items].map((item, index) => (

@@ -92,7 +92,11 @@ h6 {
   text-wrap: balance;
 }
 
-.swiper-free-mode > .swiper-wrapper {
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.marquee-swiper .swiper-wrapper {
   transition-timing-function: linear !important;
 }
 

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +21,18 @@ const navLinks = [
 
 export function SiteNavbar() {
   const [open, setOpen] = useState(false);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [open]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all-smooth">
@@ -78,21 +90,46 @@ export function SiteNavbar() {
       {/* Professional Full-Screen Mobile Drawer - Positioned below fixed header */}
       <div
         className={cn(
-          "fixed inset-x-0 bottom-0 top-20 z-40 bg-white/98 backdrop-blur-2xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] lg:hidden",
+          "fixed inset-0 top-0 z-[60] bg-white transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] lg:hidden",
           open ? "translate-x-0 opacity-100" : "translate-x-full opacity-0 pointer-events-none"
         )}
       >
-        <div className="flex flex-col h-full section-shell pb-12 overflow-y-auto pt-8">
-          <nav className="flex flex-col gap-1">
+        <div className="flex h-20 items-center justify-between border-b border-slate-100 px-6">
+          <div className="flex items-center gap-3">
+            <div className="flex size-10 items-center justify-center overflow-hidden rounded-xl border border-primary/10 bg-white">
+              <Image
+                src="/ruby-logo.jpeg"
+                alt="Logo"
+                width={40}
+                height={40}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div>
+              <p className="font-display text-sm font-black text-primary leading-none uppercase tracking-tighter">RUBY</p>
+              <p className="font-display text-[9px] font-black text-cyan uppercase tracking-widest mt-0.5 whitespace-nowrap">Science Academy</p>
+            </div>
+          </div>
+          <button
+            className="ring-focus inline-flex size-11 items-center justify-center rounded-full border border-slate-100 bg-white text-primary"
+            onClick={() => setOpen(false)}
+            type="button"
+          >
+            <X className="size-5" />
+          </button>
+        </div>
+
+        <div className="flex flex-col h-[calc(100%-80px)] section-shell py-8 overflow-hidden">
+          <nav className="flex flex-col gap-0.5">
             {navLinks.map((link, i) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "py-4 text-2xl font-bold tracking-tight text-slate-900 transition-all duration-500",
+                  "py-3 text-2xl font-black tracking-tight text-slate-900 transition-all duration-500 uppercase",
                   open ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"
                 )}
-                style={{ transitionDelay: `${i * 50 + 100}ms` }}
+                style={{ transitionDelay: `${i * 40 + 100}ms` }}
                 onClick={() => setOpen(false)}
               >
                 {link.label}
@@ -101,24 +138,22 @@ export function SiteNavbar() {
           </nav>
 
           <div className={cn(
-            "mt-8 transition-all duration-700 delay-700",
+            "mt-8 transition-all duration-700 delay-500",
             open ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           )}>
-            <Button asChild variant="accent" className="w-full rounded-2xl py-7 text-lg font-bold" onClick={() => setOpen(false)}>
+            <Button asChild variant="accent" className="w-full rounded-2xl py-7 text-lg font-black uppercase tracking-widest" onClick={() => setOpen(false)}>
               <Link href="/#registration">Enroll Now</Link>
             </Button>
           </div>
 
           <div className={cn(
-            "mt-auto pt-8 border-t border-slate-100 transition-all duration-700 delay-1000",
+            "mt-auto pb-10 transition-all duration-700 delay-700",
             open ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           )}>
-            <div className="flex flex-col gap-4 text-slate-400">
-              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-cyan">Official Academy Details</p>
-              <div className="space-y-2">
-                <p className="text-xs font-semibold text-slate-500">075 220 7369</p>
-                <p className="text-xs font-semibold text-slate-500 leading-relaxed">414/1, George R. De Silva Mawatha, Colombo 13</p>
-              </div>
+            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan/60 border-t border-slate-100 pt-6">Institutional Access Only</p>
+            <div className="mt-4 space-y-2">
+              <p className="text-xs font-bold text-slate-400">075 220 7369</p>
+              <p className="text-xs font-bold text-slate-400 leading-relaxed max-w-[200px]">414/1, George R. De Silva Mawatha, Colombo 13</p>
             </div>
           </div>
         </div>

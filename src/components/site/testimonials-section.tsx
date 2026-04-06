@@ -283,19 +283,21 @@ export function TestimonialsSection({ feedbacks }: TestimonialsSectionProps) {
           slidesPerView="auto"
           spaceBetween={24}
           loop={!isReordering}
-          speed={1000}
+          speed={8000}
           grabCursor={!isReordering}
           autoplay={!isReordering ? {
-            delay: 3500,
+            delay: 0,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
-            reverseDirection: true,
+            reverseDirection: false,
           } : false}
-          className="py-4"
+          freeMode={true}
+          modules={[Autoplay, FreeMode]}
+          className="py-4 marquee-swiper"
         >
-          {orderedFeedbacks.map((item) => (
+          {[...orderedFeedbacks, ...orderedFeedbacks, ...orderedFeedbacks].map((item, idx) => (
             <SwiperSlide
-              key={item.id}
+              key={`${item.id}-${idx}`}
               className={`!h-auto max-w-[320px] ${isReordering ? 'cursor-move' : 'cursor-grab'}`}
               draggable={isReordering}
               onDragStart={(e) => handleDragStart(e, item.id)}
