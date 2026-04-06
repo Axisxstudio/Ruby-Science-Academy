@@ -37,25 +37,25 @@ export function SiteNavbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all-smooth">
       <div className="section-shell flex h-20 items-center justify-between gap-4">
-          <div className="flex items-center gap-4 group">
-            <div className="flex size-14 items-center justify-center overflow-hidden rounded-2xl border-2 border-primary/10 bg-white shadow-md ring-4 ring-primary/5 transition-all-smooth group-hover:scale-110 group-hover:rotate-3">
-              <Image
-                src="/ruby-logo.jpeg"
-                alt="RUBY Science Academy logo"
-                width={56}
-                height={56}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div>
-              <p className="font-display text-lg sm:text-l font-black tracking-tight text-primary leading-none uppercase">
-                RUBY
-              </p>
-              <p className="font-display text-[10px] sm:text-xs font-black tracking-[0.2em] text-cyan uppercase mt-0.5 whitespace-nowrap">
-                Science Academy
-              </p>
-            </div>
+        <div className="flex items-center gap-4 group">
+          <div className="flex size-14 items-center justify-center overflow-hidden rounded-2xl border-2 border-primary/10 bg-white shadow-md ring-4 ring-primary/5 transition-all-smooth group-hover:scale-110 group-hover:rotate-3">
+            <Image
+              src="/ruby-logo.jpeg"
+              alt="RUBY Science Academy logo"
+              width={56}
+              height={56}
+              className="h-full w-full object-cover"
+            />
           </div>
+          <div>
+            <p className="font-display text-lg sm:text-l font-black tracking-tight text-primary leading-none uppercase">
+              RUBY
+            </p>
+            <p className="font-display text-[10px] sm:text-xs font-black tracking-[0.2em] text-cyan uppercase mt-0.5 whitespace-nowrap">
+              Science Academy
+            </p>
+          </div>
+        </div>
 
         <nav className="hidden items-center gap-7 lg:flex">
           {navLinks.map((link, i) => (
@@ -126,7 +126,7 @@ export function SiteNavbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "py-3 text-2xl font-black tracking-tight text-slate-900 transition-all duration-500 uppercase",
+                  "py-3 text-2xl font-semibold tracking-wide text-slate-500 transition-all duration-500 uppercase",
                   open ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"
                 )}
                 style={{ transitionDelay: `${i * 40 + 100}ms` }}
