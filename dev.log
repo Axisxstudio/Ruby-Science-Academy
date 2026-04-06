@@ -1,0 +1,36 @@
+
+> ruby-science-academy@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.2 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.55.23:3000
+- Environments: .env.local
+✓ Ready in 763ms
+Creating turbopack project { dir: 'D:\\AxisX Projects\\VNN Institute', testMode: true }
+
+○ Compiling / ...
+ GET / 200 in 8.6s (next.js: 5.4s, application-code: 3.2s)
+ GET / 200 in 1569ms (next.js: 13ms, application-code: 1556ms)
+ GET /admin/login 200 in 1924ms (next.js: 1199ms, application-code: 724ms)
+ GET /admin 200 in 2.1s (next.js: 976ms, application-code: 1133ms)
+ GET /admin 200 in 1301ms (next.js: 9ms, application-code: 1292ms)
+ GET /admin/schedules 200 in 2.3s (next.js: 888ms, application-code: 1371ms)
+ GET /admin/gallery 200 in 1669ms (next.js: 733ms, application-code: 936ms)
+ GET /admin/registrations 200 in 1908ms (next.js: 766ms, application-code: 1142ms)
+ GET /admin/schedules 200 in 1073ms (next.js: 8ms, application-code: 1066ms)
+ GET / 200 in 680ms (next.js: 6ms, application-code: 674ms)
+ GET /admin/login 307 in 928ms (next.js: 9ms, application-code: 919ms)
+ GET /admin 200 in 1051ms (next.js: 5ms, application-code: 1046ms)
+○ Compiling /admin/feedbacks ...
+ GET /admin/feedbacks 200 in 6.7s (next.js: 5.6s, application-code: 1091ms)
+ GET / 200 in 613ms (next.js: 11ms, application-code: 601ms)
+ GET / 200 in 130ms (next.js: 56ms, application-code: 74ms)
+ GET / 200 in 19ms (next.js: 6ms, application-code: 13ms)
+ GET / 200 in 1661ms (next.js: 3ms, application-code: 1658ms)
+ GET / 200 in 29ms (next.js: 9ms, application-code: 20ms)
+ GET / 200 in 677ms (next.js: 5ms, application-code: 672ms)
+ GET / 200 in 17ms (next.js: 6ms, application-code: 12ms)
+ GET / 200 in 786ms (next.js: 6ms, application-code: 780ms)
+ GET / 200 in 17ms (next.js: 5ms, application-code: 12ms)
+ GET / 200 in 11ms (next.js: 3ms, application-code: 9ms)

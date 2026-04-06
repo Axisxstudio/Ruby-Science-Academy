@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RUBY Science Academy | 2028 A/L Science Stream</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#c2e8ff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary": "#531800",
+                      "tertiary-fixed": "#ffdbcf",
+                      "surface-container-low": "#eef4ff",
+                      "on-background": "#0f1c2c",
+                      "primary-fixed": "#dae2ff",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#00c1fd",
+                      "surface-container-highest": "#d6e4f9",
+                      "on-tertiary-fixed": "#380d00",
+                      "surface-tint": "#345baf",
+                      "tertiary-container": "#792600",
+                      "surface-variant": "#d6e4f9",
+                      "on-surface-variant": "#434652",
+                      "surface": "#f8f9ff",
+                      "primary-fixed-dim": "#b1c5ff",
+                      "on-surface": "#0f1c2c",
+                      "on-primary-container": "#8dadff",
+                      "on-tertiary-fixed-variant": "#802900",
+                      "tertiary-fixed-dim": "#ffb59a",
+                      "on-secondary-fixed": "#001e2b",
+                      "on-tertiary-container": "#ff9167",
+                      "outline-variant": "#c4c6d3",
+                      "primary": "#002868",
+                      "on-secondary-fixed-variant": "#004d67",
+                      "background": "#f8f9ff",
+                      "secondary-fixed-dim": "#75d1ff",
+                      "error-container": "#ffdad6",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#dbe9fe",
+                      "on-secondary": "#ffffff",
+                      "outline": "#747783",
+                      "on-primary-fixed-variant": "#144296",
+                      "on-secondary-container": "#004b65",
+                      "on-primary-fixed": "#001947",
+                      "primary-container": "#0a3d91",
+                      "on-error": "#ffffff",
+                      "secondary": "#006688",
+                      "inverse-primary": "#b1c5ff",
+                      "error": "#ba1a1a",
+                      "surface-container": "#e5efff",
+                      "surface-dim": "#cddbf0",
+                      "surface-bright": "#f8f9ff",
+                      "inverse-surface": "#243141",
+                      "inverse-on-surface": "#e9f1ff",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #f8f9ff; color: #0f1c2c; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(20px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(13,27,42,0.06)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-xl font-extrabold tracking-tighter text-blue-900">RUBY Science Academy</div>
+<div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-sm">
+<a class="text-blue-900 border-b-2 border-cyan-500 pb-1" href="#">Home</a>
+<a class="text-slate-600 hover:text-blue-800 transition-all duration-300 hover:scale-105" href="#subjects">Subjects</a>
+<a class="text-slate-600 hover:text-blue-800 transition-all duration-300 hover:scale-105" href="#teachers">Teachers</a>
+<a class="text-slate-600 hover:text-blue-800 transition-all duration-300 hover:scale-105" href="#schedule">Schedule</a>
+<a class="text-slate-600 hover:text-blue-800 transition-all duration-300 hover:scale-105" href="#results">Results</a>
+<a class="text-slate-600 hover:text-blue-800 transition-all duration-300 hover:scale-105" href="#gallery">Gallery</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">Enroll Now</button>
+<span class="material-symbols-outlined text-blue-900 cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#002868] to-[#1e88e5] px-6 py-20">
+<div class="absolute inset-0 opacity-20" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKZqdK_x9vHKHIBpGP8CmQQ6bmcgqeGPQkKzdc21zKd2Pj_OS-YW1LUqM7pDKm9bAdZZwouDJcLM2xUnVVbkQC_DBARwGXHDNeFUUBQjr2-tS0YxIxneYaIWKyOqfPwyY0N88xkMuK6vbfJoHr7bTDfxak26iWvSCRPciFVI4lX5guZcIgh9GJ7Ixz--ssNaYoJZo2CxnmwGJPhWnqcKUADlHfWfuNSvaz0QyElWv2hVTvc22olCDbbEac2NCg50vhT2ce6gLeeb2W')"></div>
+<div class="max-w-5xl mx-auto text-center relative z-10 text-white">
+<div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-8 border border-white/20">
+<span class="w-2 h-2 bg-secondary-container rounded-full animate-pulse"></span>
+<span class="text-xs font-bold tracking-widest uppercase font-label">Enrollment Open for 2028 Batch</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">2028 A/L Science Stream</h1>
+<p class="text-xl md:text-2xl font-medium text-blue-100 mb-10 max-w-2xl mx-auto font-body">Tamil Medium Classes | Colombo Kotahena</p>
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<span class="px-6 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm font-bold flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#FF6B2C]"></span> Chemistry
+                    </span>
+<span class="px-6 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm font-bold flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#FFA726]"></span> Physics
+                    </span>
+<span class="px-6 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm font-bold flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#00A99D]"></span> Maths
+                    </span>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="w-full sm:w-auto px-10 py-4 bg-secondary-container text-primary font-extrabold rounded-full transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-secondary-container/40">Join Now</button>
+<button class="w-full sm:w-auto px-10 py-4 border-2 border-white/30 hover:bg-white/10 text-white font-extrabold rounded-full transition-all">View Schedule</button>
+</div>
+</div>
+<div class="absolute -bottom-12 -left-12 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl"></div>
+<div class="absolute -top-12 -right-12 w-96 h-96 bg-primary-container/40 rounded-full blur-3xl"></div>
+</section>
+<!-- About Section (Asymmetric Bento) -->
+<section class="max-w-7xl mx-auto px-6 py-32">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-5 space-y-8">
+<h2 class="text-4xl md:text-5xl font-extrabold text-primary leading-tight">Academic excellence, tailored for results.</h2>
+<p class="text-lg text-slate-600 font-body leading-relaxed">We transform traditional learning into a premium academic journey. Our curator-led approach focuses on cognitive clarity and strategic examination prep for the Tamil medium stream.</p>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-low p-8 rounded-lg shadow-sm space-y-4 md:mt-12 transition-all hover:translate-y-[-8px]">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded-2xl text-white">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</div>
+<h3 class="text-xl font-bold text-primary">High success rate</h3>
+<p class="text-slate-500 text-sm font-body">Consistently producing top district ranks through rigorous testing cycles.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-[0_20px_40px_rgba(13,27,42,0.06)] space-y-4 transition-all hover:translate-y-[-8px]">
+<div class="w-12 h-12 bg-secondary flex items-center justify-center rounded-2xl text-white">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</div>
+<h3 class="text-xl font-bold text-primary">Experienced lecturers</h3>
+<p class="text-slate-500 text-sm font-body">Led by faculty with over 15+ years of curriculum specialization.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-[0_20px_40px_rgba(13,27,42,0.06)] space-y-4 md:mt-12 transition-all hover:translate-y-[-8px]">
+<div class="w-12 h-12 bg-tertiary-container flex items-center justify-center rounded-2xl text-white">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+</div>
+<h3 class="text-xl font-bold text-primary">Small group focus</h3>
+<p class="text-slate-500 text-sm font-body">Personalized attention that big halls can't offer. Max 30 students per batch.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Subjects & Teachers (Curated Cards) -->
+<section class="bg-surface py-32 px-6" id="subjects">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-extrabold text-primary mb-4">Elite Faculty</h2>
+<p class="text-slate-600 font-body">Our lecturers are curators of knowledge, distilling complex science into intuitive concepts.</p>
+</div>
+<div class="h-1 w-24 bg-primary rounded-full hidden md:block mb-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Chemistry -->
+<div class="group">
+<div class="relative overflow-hidden rounded-lg mb-6 shadow-xl aspect-[4/5]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="professional portrait of a male chemistry teacher in a lab coat, warm scholarly environment, bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwM-t85FSQ037tzeC9wfTo7AUbrOgcoPLv_qLO0YHPLZiXXwq1wXO06QV80IoSDJ8uo8kixO6fqpqiEAkLXtPrHpuZAmAx7oA4eLdd-DyMkvhWgWk_Vf8JTywAgQ9PqW6j_mLQSFweHb5J8et-ddMcsdOMtrBSzpJfVkda8nS_2XE3qG3VmLTjVGJD9h2CfG13_4qkPJr5soyDRsNGlxHJCmPBYHO46KboUmS7qNK0ItRSzz2KcfEsmXkXOG72qesma7rnc-Ys6w1N"/>
+<div class="absolute top-6 left-6">
+<span class="bg-[#FF6B2C] text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase">Chemistry</span>
+</div>
+</div>
+<h3 class="text-2xl font-extrabold text-primary mb-2">Dr. S. Kuganathan</h3>
+<p class="text-slate-500 text-sm font-label mb-4">Ph.D. in Organic Chemistry, Senior Lecturer</p>
+<p class="text-slate-600 text-sm font-body leading-relaxed">Specializing in reaction mechanisms and stereochemistry for advanced level requirements.</p>
+</div>
+<!-- Physics -->
+<div class="group md:translate-y-8">
+<div class="relative overflow-hidden rounded-lg mb-6 shadow-xl aspect-[4/5]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="academic professor explaining physics on a chalkboard with complex equations, dramatic natural side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfn31DvBBUFVx5yXjWsKY9kDPbwqzbrsKW89CuWkf_1Oq5WLfdbtuWLdI1DuwXr_EGYRGBbmuYF_zjAf6aTmOd7ty0FDZrUj7WxFfbYNeYzHYOGXjMaNZmFvrmJ5EozK1-b6sTPI2PbIEeDgMiphY_X-Z8dSEdjCCyxPLso_ip6Mc4MhOzwM3odVOJTs_qbaabNvQ3HjEPEOThbrBYOJvhuUTHv7QMguD7cfg8BOdM47VXc_c51O2QeMpboI-1niYQFDj5iavZQMc1"/>
+<div class="absolute top-6 left-6">
+<span class="bg-[#FFA726] text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase">Physics</span>
+</div>
+</div>
+<h3 class="text-2xl font-extrabold text-primary mb-2">Eng. R. Sivakumar</h3>
+<p class="text-slate-500 text-sm font-label mb-4">B.Sc. Eng (Hons), University of Moratuwa</p>
+<p class="text-slate-600 text-sm font-body leading-relaxed">Master of logical deductions. Expert in Applied Mechanics and Modern Physics.</p>
+</div>
+<!-- Maths -->
+<div class="group">
+<div class="relative overflow-hidden rounded-lg mb-6 shadow-xl aspect-[4/5]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="middle aged woman mathematics teacher holding a textbook in a modern brightly lit office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt5u_XuN2HJI21flT2kgl9QuQ9ofk5bZXOvoMzNXWJT4NV8481CD-EC-6vNrgAvV7s1ZzaMOCOmukzJlW0rvLEB12kCRohCIJqbN9e8mGVsenwcQqrX9ZuFDVRsPxdw2mAPwAiMNkP5An4EIHFv-ZHdCtd9YCf5EGiOwe9KZhRlP17HiMcc9BXdCZglOQwsSchaQQqfmwt9Hg-HA3w8PSk_jII3qHJt4ZwxdZPUnqRmuMRYnnuBaITjUC4-dCm_wNiN2untzsAvCLR"/>
+<div class="absolute top-6 left-6">
+<span class="bg-[#00A99D] text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase">Pure Maths</span>
+</div>
+</div>
+<h3 class="text-2xl font-extrabold text-primary mb-2">Mrs. V. Janani</h3>
+<p class="text-slate-500 text-sm font-label mb-4">M.Sc. Theoretical Mathematics</p>
+<p class="text-slate-600 text-sm font-body leading-relaxed">Focusing on Pure Mathematics and Statistics with intensive problem-solving workshops.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Schedule Section -->
+<section class="py-32 px-6 max-w-7xl mx-auto" id="schedule">
+<div class="bg-primary text-white rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+<div class="p-12 md:w-1/3 bg-primary-container flex flex-col justify-between">
+<div>
+<h2 class="text-4xl font-extrabold mb-6">2028 Weekly Schedule</h2>
+<p class="text-blue-200 font-body mb-8">Weekend intensive batches designed for high-performing students.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-sm font-bold">
+<span class="material-symbols-outlined text-secondary-container" data-icon="location_on">location_on</span>
+                            Kotahena Campus, Colombo 13
+                        </div>
+<div class="flex items-center gap-4 text-sm font-bold">
+<span class="material-symbols-outlined text-secondary-container" data-icon="calendar_month">calendar_month</span>
+                            Every Saturday &amp; Sunday
+                        </div>
+</div>
+</div>
+<div class="p-8 md:p-12 md:w-2/3 bg-white text-primary">
+<div class="space-y-8">
+<div class="flex flex-col md:flex-row justify-between pb-6 border-b border-slate-100 gap-4">
+<div>
+<h4 class="text-lg font-extrabold mb-1">Saturday Morning</h4>
+<p class="text-sm font-bold text-slate-400 font-label">08:00 AM - 12:30 PM</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-[#FF6B2C]"></span>
+<span class="font-bold text-sm">Chemistry Theory - Batch A</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between pb-6 border-b border-slate-100 gap-4">
+<div>
+<h4 class="text-lg font-extrabold mb-1">Saturday Afternoon</h4>
+<p class="text-sm font-bold text-slate-400 font-label">01:30 PM - 05:30 PM</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-[#FFA726]"></span>
+<span class="font-bold text-sm">Physics Theory - Batch A</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between pb-6 border-b border-slate-100 gap-4">
+<div>
+<h4 class="text-lg font-extrabold mb-1">Sunday Morning</h4>
+<p class="text-sm font-bold text-slate-400 font-label">08:00 AM - 01:00 PM</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-[#00A99D]"></span>
+<span class="font-bold text-sm">Pure Maths - Batch A</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between gap-4">
+<div>
+<h4 class="text-lg font-extrabold mb-1">Sunday Afternoon</h4>
+<p class="text-sm font-bold text-slate-400 font-label">02:00 PM - 05:00 PM</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-bold text-sm">Combined Maths Workshop</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Results & Achievements -->
+<section class="py-32 bg-surface-container-low px-6" id="results">
+<div class="max-w-7xl mx-auto text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-extrabold text-primary mb-6">Our Legacy of Success</h2>
+<p class="text-slate-600 max-w-xl mx-auto font-body">Numbers that reflect our commitment to excellence year after year.</p>
+</div>
+<div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
+<div class="relative p-10 bg-white rounded-lg shadow-[0_20px_40px_rgba(13,27,42,0.06)] overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl" data-icon="stars">stars</span>
+</div>
+<div class="text-5xl font-extrabold text-primary mb-2">95%</div>
+<div class="text-sm font-bold tracking-widest text-secondary uppercase font-label">Overall Pass Rate</div>
+</div>
+<div class="relative p-10 bg-primary text-white rounded-lg shadow-xl overflow-hidden md:-translate-y-6">
+<div class="absolute top-0 right-0 p-4 opacity-20">
+<span class="material-symbols-outlined text-6xl" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<div class="text-5xl font-extrabold text-secondary-container mb-2">80%</div>
+<div class="text-sm font-bold tracking-widest text-blue-200 uppercase font-label">A/B Results</div>
+</div>
+<div class="relative p-10 bg-white rounded-lg shadow-[0_20px_40px_rgba(13,27,42,0.06)] overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl" data-icon="emoji_events">emoji_events</span>
+</div>
+<div class="text-5xl font-extrabold text-primary mb-2">12+</div>
+<div class="text-sm font-bold tracking-widest text-secondary uppercase font-label">Island Ranks</div>
+</div>
+</div>
+<!-- Result Gallery (Screenshots) -->
+<div class="flex gap-6 overflow-x-auto no-scrollbar pb-8 px-4 snap-x">
+<div class="min-w-[280px] h-[400px] bg-white rounded-lg p-2 shadow-md snap-center flex-shrink-0">
+<img class="w-full h-full object-cover rounded-md" data-alt="screenshot of exam result sheet showing multiple A grades in science stream, verified digital document" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1V8f9YQGlNZc4068YM6ejdz6FiahkeRvvCoGoYESWIY5-I1-acBNavGOwHFds-b8BC5Lee4R0ixwEXR6bok4HPiIZF6h4MR_ZR71LM2k3qBZzskvgu_BhuJZ9fpY7J_YT_bYUUyp4xV-3j9Di4UerE7-k9BQYDjNcr2BqbKskgzzTNxduCYGQJHJ-sFTC1C6EjF_J8SV8Df71uvx5qccLvLx3QCe9EFyQntRNJtLdGoVs0P_kIciXnOqQUUYkYcv_IQwGKKMU-bnZ"/>
+</div>
+<div class="min-w-[280px] h-[400px] bg-white rounded-lg p-2 shadow-md snap-center flex-shrink-0">
+<img class="w-full h-full object-cover rounded-md" data-alt="smiling student holding an award certificate with academy logo, bright studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-OyTMZxoxUzrWAEq5p9tRVLOythfrG23b6N_ypew1B6dutC3mbfFgMs2U4VjkBibJbl4wtwI-z9Eigu6M09mmmfaRkL1zZIVzxnGqiOF91F0HhDGf4fQw7FtX5yXEZ7cI0d1gBxfop_bo_fIzt1ZLuUHQlC3nSctS1-YSoozgxwtbA4dCnb7ohMG5x1DI7yRKSrc_DHUFCXfvaEQTL6ZvrVxxTKHvMxn0U9oby1j74NGOVMoPPUtcehlwBx5HmGzZgldB4PLv2B3x"/>
+</div>
+<div class="min-w-[280px] h-[400px] bg-white rounded-lg p-2 shadow-md snap-center flex-shrink-0">
+<img class="w-full h-full object-cover rounded-md" data-alt="top level student scorecard displayed on a tablet, clear high-resolution graphic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKY7EA_tsoqd883R5bNUKIRTrkUmD-wIySQr8Wr9QpyiiLUJFBm9H4wkYjP5lP-G_Q5gnHg6Ngpqq-w9Aack2_BWgK2wvV22pZzRANBbVwNt0u8H3v7ktYgaege-icD4wYzS2_g8_-G69v_IpcqeqpVofZDukhNIAjf840fGMKLDWWb24I0qpPF-7FKLJ5BUV6yYnFh2HSmqxhjs4HmeFI93t6sDxl7ToVCeS-v6vldP1j18O1dFpNHgWgmjZ4q0J3fe3AVPDvi-Ik"/>
+</div>
+<div class="min-w-[280px] h-[400px] bg-white rounded-lg p-2 shadow-md snap-center flex-shrink-0">
+<img class="w-full h-full object-cover rounded-md" data-alt="close up of handwritten high mark feedback on a test paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_2meZo768GFOo4zYQq0rm8taukVq7u-SWuhmBvfozuSxHbhgnwBdAiwx37JFNdkL27TyjkaQ3ZnhRUvGOpzx0EbvU_osm7SvkwFoycTFXgaU_9Bf2tV8g32Qg0l3qNZNhZ0c4hY4hNTPwpuwWtXj5H5KvYjpseaHuSHu8Qbc71f5crGX9raF8waxVSjxw4gbMh-wOAoIi6FP4vVCFbr4djf4iSUWuvL74FwRDXob1f0r8Z5P8Dr-h5gDmJQoL3fVI6J4PRf5c_6Qd"/>
+</div>
+<div class="min-w-[280px] h-[400px] bg-white rounded-lg p-2 shadow-md snap-center flex-shrink-0">
+<img class="w-full h-full object-cover rounded-md" data-alt="group photo of students in graduation caps throwing papers in the air at the academy campus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNYpeyp69srWUd51bnsi2cfsYOfdMTSKomxvSJA35MU4If5NG2T07iwvnmIJtKlry9i74CaxDFJgz91XeWCyRgkCokiFNdnQl6D7TeD7h_IMCoSOC4bLercl_H_GKXnJsKfTFXSE2dI6aRePdXdLiVfym31UM8LaPlbN-JPwkwPtl0Ni48zUJFY6cmq8NRXh0p1YqRksVRDa-UloTlKX6JFqeU7Su50Qabs-_s_XFS0lDR4_6RNHGWJolFNmJj8njGhtl2yu6Pg4Jw"/>
+</div>
+</div>
+</section>
+<!-- Life at Institute (Marquee) -->
+<section class="py-32 overflow-hidden bg-white" id="gallery">
+<div class="mb-16 px-6 max-w-7xl mx-auto">
+<h2 class="text-4xl font-extrabold text-primary mb-4">Life at the Academy</h2>
+<div class="h-1.5 w-16 bg-secondary-container"></div>
+</div>
+<div class="flex gap-8 animate-infinite-scroll">
+<div class="flex-none w-[450px] aspect-video rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="modern minimalist classroom at RUBY science academy with students focused on their work" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1RQ5W0p-oy-A6YrWRtPhHHmFIk_55nS_UzpMDEIfGI_6syDjY1f9J0fXLqzHFdNOFN08S3QOof8xuCZmJKcgE7E1Jox33WkEUB-TQn1VmWwiTKE_I7NwUlmGPl2aj8H9S7-iQ4-jpyGbvbQchfpBqGeWfie3pLcHwChhxCTGgwFe1LZYdoLP3pSxWqOMQfLxjMIQGRq2NxgOUJV80aTe8YlrYTDlvGt491_TGDYpuuFSsHBGPcLnblhuCQ-2BxnDrrxE9q9Hatv06"/>
+</div>
+<div class="flex-none w-[450px] aspect-video rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="close up of a science experiment being conducted in a well equipped laboratory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPIonrxs-L5CQvLtfczLZ8q8O4TNzli48FFdCZL9mpdK0f2EyZksxeoskyGXxYR4JKl1Q5Hje4UU8ou-I2W0u9rgunwJ9aDZfpYgYCh6si_y-TIdyQQ9jal5i9BdjpB9giL3e5A-bgIqtOEQSU-JvKPmDdrpg6Izo4wGXx6smAHs3rv-_RnTq6tY8YEh60KnS0-BjFnE52xMwsYDncLTkfjXZWpaseffIs9GeInKTLZ5JcgNwm2alrftWgD1LWbyHEKsuRn5x4Cc83"/>
+</div>
+<div class="flex-none w-[450px] aspect-video rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="group of students discussing maths problems around a large table in the library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANQl1cPLzfpmx7vGi2SBGoDU4QVF30NFKoak4aIGI3P-rQXKwpHook_mrNELrE2F9eaWSxOgQirp6RPX5T_5GMf1avuPuMvdHsBpuyctlu2XgyPr3_1Q_QtlGg7_pCTS8yRLT14KEywRU8g4mQB8NMOLqifLCxbaJoqPCmFXfK3_XPUvPoh8hIwIbnt4JB0OjY88Krc0aUko0NllXXi6JTa6yHJVtVwpZq8Bq2N1rBrBAPpt2irT3EyaTwiLFm0wzjr5YHVFi2_M4d"/>
+</div>
+<div class="flex-none w-[450px] aspect-video rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="wide shot of a lecture hall with a professor teaching on stage with a projector screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKTXr36AZV3pb0nCkQ4ZM6TNOPcWO8mucf3xt9DTp4_OR27hfTafZAqlAi1iKWwt2GfP32XVlJEzHAPtIGLlDJL4rDO0ufGkdmxFT5LGgua_eJvA5PqR6Xf3nG57iedDue7J5z7dbRSkKQG8hhx9vF-OHzB8FaSQpVUBrp5BFfo2tILY3CTgiZOfjSeA_w1_JXmGvhs032-gWsqtIpG0W54Dm8AlCAa6uH93_XYE-zzXsDBweJfBgFMIhTimvBQHgA8rZF8HJ5qTjE"/>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-32 bg-primary px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-16 gap-8">
+<div class="text-white">
+<h2 class="text-4xl font-extrabold mb-4">Student Voices</h2>
+<p class="text-blue-200">The journey from student to top ranker, told by them.</p>
+</div>
+<button class="px-8 py-3 bg-white/10 border border-white/20 text-white rounded-full font-bold hover:bg-white/20 transition-all">View All Stories</button>
+</div>
+<div class="flex gap-8 overflow-x-auto no-scrollbar pb-8 snap-x">
+<!-- Testimonial 1 -->
+<div class="min-w-[350px] md:min-w-[450px] bg-white p-10 rounded-lg shadow-2xl snap-center shrink-0">
+<div class="flex text-[#FFA726] mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-slate-700 text-lg italic mb-8 font-body">"The focus on concept clarity in Chemistry made all the difference. I used to struggle with organic mechanisms, but Dr. Kuganathan made it so intuitive."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="headshot of a smiling young man, successful alumni student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJBUd8p9Vx__coBn6M6ZznrjCsEUbcujypURGki2q_qsXOSgN06ga33ccKkMs2ty8E8SWL0ctufLSHGBpb_lhgkHoYapvqReZf6dHP1Ar_DpA8386lqYAdzkVgFXCljLNy_v4IiE9VqTUFKUusf13JiZhl7lxzIH1E1aVZCfJquG2p4MOtOdeOfAEH_NI7K2vwSZWZCNtQJe5xxjKQdIfnrvE8AQU_CTz_isqijQ9utdGAPS15Eai-2IY1qL0bTv02zawvdfvIAhu4"/>
+</div>
+<div>
+<h4 class="font-bold text-primary">Karthick Ramanan</h4>
+<p class="text-xs font-bold text-slate-400 font-label">Medicine Student, Univ. Colombo</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="min-w-[350px] md:min-w-[450px] bg-surface-container-high p-10 rounded-lg shadow-2xl snap-center shrink-0">
+<div class="flex text-[#FFA726] mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-slate-700 text-lg italic mb-8 font-body">"Maths was my biggest fear until I joined RUBY. Mrs. Janani's step-by-step methodology and constant mock tests gave me the confidence to ace the exams."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="headshot of a young professional woman smiling at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvBByGZasumBOX9N2ricJ72_o-0hWS0FlXonz7hDJIVCPhSQjvLBnoMj3wEXOndQ3itIbCO0ZUtbR5PUOihI7qh-wk3btidMQiTzcYvTpYh0Zw_qk3AT13l72K8EUOCQd0PIJqta8n2ZW96YSKp07BzSnRzrXtrSpXZBBS9-1bxbo0i7zeT7R4w4ZhVvNnXeiq1vh6bv4mnRHP0gCX-7X8OJhrpV0KpASeYiqr5RksuyohyeEBKOLu94RUw2JA58slHDvjZdQ3V8lr"/>
+</div>
+<div>
+<h4 class="font-bold text-primary">Aarthi Sanmugam</h4>
+<p class="text-xs font-bold text-slate-400 font-label">Engineering Undergrad, Moratuwa</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Registration Form (Multi-step Entry) -->
+<section class="py-32 px-6" id="enroll">
+<div class="max-w-4xl mx-auto bg-white rounded-lg shadow-[0_20px_40px_rgba(13,27,42,0.1)] overflow-hidden border-t-8 border-secondary-container">
+<div class="p-12">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-extrabold text-primary mb-4">Start Your Journey</h2>
+<p class="text-slate-500 font-body">Complete the initial registration form to reserve your seat for the 2028 batch.</p>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs font-extrabold tracking-widest text-slate-400 uppercase font-label">Student Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 text-primary focus:ring-0 focus:bg-white transition-all border-b-2 border-transparent focus:border-secondary-container" placeholder="Enter Full Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-extrabold tracking-widest text-slate-400 uppercase font-label">Contact Number</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 text-primary focus:ring-0 focus:bg-white transition-all border-b-2 border-transparent focus:border-secondary-container" placeholder="+94 XX XXX XXXX" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-extrabold tracking-widest text-slate-400 uppercase font-label">School Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 text-primary focus:ring-0 focus:bg-white transition-all border-b-2 border-transparent focus:border-secondary-container" placeholder="Your current school" type="text"/>
+</div>
+<div class="space-y-4">
+<label class="text-xs font-extrabold tracking-widest text-slate-400 uppercase font-label">Selected Subjects</label>
+<div class="flex flex-wrap gap-4">
+<label class="flex items-center gap-3 bg-surface-container-low px-6 py-3 rounded-full cursor-pointer hover:bg-surface-container-high transition-all">
+<input class="rounded text-secondary-container focus:ring-0" type="checkbox"/>
+<span class="text-sm font-bold text-primary">Chemistry</span>
+</label>
+<label class="flex items-center gap-3 bg-surface-container-low px-6 py-3 rounded-full cursor-pointer hover:bg-surface-container-high transition-all">
+<input class="rounded text-secondary-container focus:ring-0" type="checkbox"/>
+<span class="text-sm font-bold text-primary">Physics</span>
+</label>
+<label class="flex items-center gap-3 bg-surface-container-low px-6 py-3 rounded-full cursor-pointer hover:bg-surface-container-high transition-all">
+<input class="rounded text-secondary-container focus:ring-0" type="checkbox"/>
+<span class="text-sm font-bold text-primary">Maths</span>
+</label>
+</div>
+</div>
+<div class="pt-8 text-center">
+<button class="w-full md:w-auto px-12 py-4 bg-primary text-white font-extrabold rounded-full hover:bg-primary-container transition-all shadow-xl shadow-primary/20" type="submit">Submit Application</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-8 right-8 z-[100] w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform" href="#">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24"><path d="M12.031 6.172c-2.32 0-4.591 1.191-5.728 3.092a5.41 5.41 0 0 0-.642 3.125c.19 1.258.828 2.378 1.761 3.155l-.57 2.127 2.193-.565c.91.536 1.954.82 3.02.822h.004c3.486 0 6.326-2.84 6.326-6.327 0-3.487-2.842-6.329-6.364-6.329zM15.42 14.886c-.19.531-1.091 1.01-1.505 1.076-.391.062-.893.109-1.44-.078a6.56 6.56 0 0 1-2.484-1.637 6.841 6.841 0 0 1-1.666-2.527c-.24-.555-.138-1.077.086-1.442.224-.366.5-.53.666-.696.166-.167.222-.249.333-.415.11-.166.055-.332-.028-.498-.083-.166-.747-1.801-.1-2.023.245-.221.472-.25.696-.25.224 0 .584.055.889.387.304.332 1.055 2.572 1.139 2.738.083.166.138.359.028.58-.11.222-.166.387-.332.58-.166.194-.36.442-.514.595-.172.172-.351.359-.151.705.2.347.889 1.464 1.91 2.375.29.258.539.414.838.513.314.104.603.088.832.054.256-.038.78-.32 1.078-.62.298-.3.298-.553.21-.692-.088-.138-.333-.221-.692-.415-.359-.193-2.127-1.05-2.459-1.16-.332-.11-.572-.166-.814.194-.242.359-.936 1.162-1.15 1.41-.214.249-.429.277-.788.083-.359-.193-1.516-.559-2.887-1.78-.31-.277-.522-.619-.624-.95-.102-.332.01-.637.21-.837l.478-.555c.15-.176.199-.304.298-.503.099-.199.049-.373-.025-.523-.075-.15-.672-1.618-.921-2.217-.242-.584-.487-.504-.672-.513-.173-.008-.372-.01-.571-.01-.199 0-.522.075-.796.373-.274.299-1.045 1.021-1.045 2.49 0 1.47 1.07 2.888 1.219 3.087.149.199 2.106 3.216 5.101 4.51.712.308 1.269.493 1.703.631.716.227 1.368.195 1.884.118.575-.085 1.766-.721 2.015-1.417.25-.696.25-1.295.174-1.417-.074-.122-.273-.199-.621-.373s-2.065-1.02-2.388-1.134z"></path></svg>
+</a>
+<!-- Footer -->
+<footer class="bg-white border-t border-slate-100">
+<div class="max-w-7xl mx-auto py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-center md:text-left">
+<div class="font-['Plus_Jakarta_Sans'] font-extrabold text-blue-900 text-xl mb-2">RUBY Science Academy</div>
+<p class="font-['Manrope'] text-xs uppercase tracking-widest text-slate-400">© 2024 RUBY Science Academy. All Rights Reserved.</p>
+</div>
+<div class="flex gap-8 font-['Manrope'] text-xs uppercase tracking-widest font-bold">
+<a class="text-slate-400 hover:text-blue-600 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-blue-600 transition-opacity" href="#">Terms of Service</a>
+<a class="text-slate-400 hover:text-blue-600 transition-opacity" href="#">FAQ</a>
+</div>
+<div class="text-xs font-bold text-primary font-body tracking-wider uppercase">
+                Developed by <span class="text-secondary-container">AxisX Studio</span>
+</div>
+</div>
+</footer>
+<style>
+        @keyframes infiniteScroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+        .animate-infinite-scroll {
+            display: flex;
+            width: fit-content;
+            animation: infiniteScroll 40s linear infinite;
+        }
+        .animate-infinite-scroll:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</body></html>

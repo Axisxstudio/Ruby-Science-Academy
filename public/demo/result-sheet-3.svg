@@ -1,0 +1,21 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#EDFBF9"/>
+  <rect x="70" y="70" width="1060" height="760" rx="40" fill="white"/>
+  <rect x="110" y="120" width="980" height="110" rx="28" fill="#00A99D"/>
+  <text x="150" y="188" fill="white" font-size="50" font-family="Arial" font-weight="800">Maths Distinction Batch</text>
+  <rect x="120" y="280" width="320" height="420" rx="34" fill="#EDFBF9"/>
+  <rect x="470" y="280" width="610" height="80" rx="26" fill="#E8F2FF"/>
+  <rect x="470" y="390" width="610" height="80" rx="26" fill="#E8F2FF"/>
+  <rect x="470" y="500" width="610" height="80" rx="26" fill="#E8F2FF"/>
+  <rect x="470" y="610" width="610" height="80" rx="26" fill="#E8F2FF"/>
+  <text x="170" y="360" fill="#00645D" font-size="28" font-family="Arial" font-weight="700">Batch Result Mix</text>
+  <text x="170" y="440" fill="#1A1A1A" font-size="70" font-family="Arial" font-weight="800">80%</text>
+  <text x="170" y="490" fill="#62758A" font-size="22" font-family="Arial">A/B results</text>
+  <g fill="#0F4C81" font-size="24" font-family="Arial" font-weight="700">
+    <text x="510" y="330">Pure Maths • Distinction list</text>
+    <text x="510" y="440">Applied Maths • Strong A/B performance</text>
+    <text x="510" y="550">Statistics • Fast improvement group</text>
+    <text x="510" y="660">Repeat batch • Structured comeback story</text>
+  </g>
+  <text x="120" y="770" fill="#62758A" font-size="22" font-family="Arial">Replace this placeholder with real result screenshots and certificates from Supabase Storage.</text>
+</svg>

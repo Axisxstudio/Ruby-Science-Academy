@@ -1,0 +1,23 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#FFF8ED"/>
+  <rect x="70" y="70" width="1060" height="760" rx="40" fill="white"/>
+  <rect x="110" y="120" width="980" height="120" rx="30" fill="#FFA726"/>
+  <text x="150" y="175" fill="#7A4A00" font-size="32" font-family="Arial" font-weight="700">Physics Rank Board • 2024</text>
+  <text x="150" y="220" fill="white" font-size="54" font-family="Arial" font-weight="800">Top District Rankings</text>
+  <circle cx="250" cy="430" r="110" fill="#FFF1D7"/>
+  <circle cx="600" cy="430" r="110" fill="#FFF1D7"/>
+  <circle cx="950" cy="430" r="110" fill="#FFF1D7"/>
+  <g fill="#7A4A00" font-family="Arial" font-weight="800" text-anchor="middle">
+    <text x="250" y="420" font-size="54">#01</text>
+    <text x="600" y="420" font-size="54">#04</text>
+    <text x="950" y="420" font-size="54">#08</text>
+  </g>
+  <g fill="#1A1A1A" font-family="Arial" font-weight="700" text-anchor="middle">
+    <text x="250" y="500" font-size="26">Island Rank</text>
+    <text x="600" y="500" font-size="26">District Rank</text>
+    <text x="950" y="500" font-size="26">District Rank</text>
+  </g>
+  <rect x="120" y="610" width="960" height="150" rx="30" fill="#EDF6FF"/>
+  <text x="170" y="670" fill="#0F4C81" font-size="30" font-family="Arial" font-weight="700">Achievement proof section</text>
+  <text x="170" y="720" fill="#62758A" font-size="24" font-family="Arial">Use this area for rank lists, award snapshots, and newspaper mentions uploaded from the admin panel.</text>
+</svg>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Enrollment | RUBY Science Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#c2e8ff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#531800",
+                        "tertiary-fixed": "#ffdbcf",
+                        "surface-container-low": "#eef4ff",
+                        "on-background": "#0f1c2c",
+                        "primary-fixed": "#dae2ff",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#00c1fd",
+                        "surface-container-highest": "#d6e4f9",
+                        "on-tertiary-fixed": "#380d00",
+                        "surface-tint": "#345baf",
+                        "tertiary-container": "#792600",
+                        "surface-variant": "#d6e4f9",
+                        "on-surface-variant": "#434652",
+                        "surface": "#f8f9ff",
+                        "primary-fixed-dim": "#b1c5ff",
+                        "on-surface": "#0f1c2c",
+                        "on-primary-container": "#8dadff",
+                        "on-tertiary-fixed-variant": "#802900",
+                        "tertiary-fixed-dim": "#ffb59a",
+                        "on-secondary-fixed": "#001e2b",
+                        "on-tertiary-container": "#ff9167",
+                        "outline-variant": "#c4c6d3",
+                        "primary": "#002868",
+                        "on-secondary-fixed-variant": "#004d67",
+                        "background": "#f8f9ff",
+                        "secondary-fixed-dim": "#75d1ff",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#dbe9fe",
+                        "on-secondary": "#ffffff",
+                        "outline": "#747783",
+                        "on-primary-fixed-variant": "#144296",
+                        "on-secondary-container": "#004b65",
+                        "on-primary-fixed": "#001947",
+                        "primary-container": "#0a3d91",
+                        "on-error": "#ffffff",
+                        "secondary": "#006688",
+                        "inverse-primary": "#b1c5ff",
+                        "error": "#ba1a1a",
+                        "surface-container": "#e5efff",
+                        "surface-dim": "#cddbf0",
+                        "surface-bright": "#f8f9ff",
+                        "inverse-surface": "#243141",
+                        "inverse-on-surface": "#e9f1ff",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .progress-orb {
+            background: linear-gradient(135deg, #00c1fd 0%, #006688 100%);
+        }
+        .asymmetric-shape {
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar (Suppressed as per "Linear/Transactional" rule, but logo/header kept for branding) -->
+<header class="fixed top-0 w-full z-50 glass-nav shadow-[0_20px_40px_rgba(13,27,42,0.06)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-xl font-extrabold tracking-tighter text-blue-900 font-headline">RUBY Science Academy</div>
+<div class="hidden md:flex gap-4">
+<span class="text-xs font-label uppercase tracking-widest text-slate-400">Step 3 of 4: Selection</span>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6">
+<div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Visual & Progress Indicator -->
+<div class="lg:col-span-4 space-y-8">
+<div class="space-y-4">
+<h1 class="text-4xl font-headline font-extrabold tracking-tight text-primary leading-tight">Start Your <span class="text-secondary-container">Scientific</span> Journey</h1>
+<p class="text-on-surface-variant text-lg">Join the elite rank of students achieving 99th percentile results with our curated methodology.</p>
+</div>
+<!-- Progress Tracker -->
+<div class="space-y-6 bg-surface-container-low p-8 rounded-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+<div class="relative z-10 space-y-8">
+<div class="flex items-center gap-4 opacity-40">
+<div class="w-10 h-10 rounded-full border-2 border-primary flex items-center justify-center font-bold text-primary">1</div>
+<span class="font-headline font-bold text-primary">Personal Info</span>
+</div>
+<div class="flex items-center gap-4 opacity-40">
+<div class="w-10 h-10 rounded-full border-2 border-primary flex items-center justify-center font-bold text-primary">2</div>
+<span class="font-headline font-bold text-primary">Batch Details</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full progress-orb flex items-center justify-center font-bold text-white shadow-lg shadow-secondary-container/30">3</div>
+<span class="font-headline font-bold text-primary">Subjects</span>
+</div>
+<div class="flex items-center gap-4 opacity-40">
+<div class="w-10 h-10 rounded-full border-2 border-primary flex items-center justify-center font-bold text-primary">4</div>
+<span class="font-headline font-bold text-primary">Review</span>
+</div>
+</div>
+</div>
+<div class="rounded-lg overflow-hidden h-48 bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="clean minimal scientific laboratory with blue accent lighting and high-tech equipment in a soft focus professional atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg9-yX1O5_N_0lDaX4taPJwD_dz4eKKDTwyIHKKWrCS45WpJmmgZgq3IbPFbXHMixDXmIh23U0kjwl8a3e376Thd0568ouiRwGPsmmLZIlGYeDyi7PPm-ZSC_o5E_d8yufkSywvh2kFWmzh6UfdacU3jUArnHXW7gKJmoalA2riLOkUytEaII9muv_Kn5Q4hoHyseWvGHGbNEW8EjDn7ZJbJ8zTTbA5y86oZTvtfg0SsDcsBL8B74Cqwp06XspYYEW-8nytr9x-hDM"/>
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px]"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<div class="text-white text-xs font-label uppercase tracking-widest mb-1">Academic Curator</div>
+<div class="text-white font-headline font-bold">Excellence is a habit, not an act.</div>
+</div>
+</div>
+</div>
+<!-- Right Column: The Form Canvas -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-lg shadow-[0_20px_40px_rgba(13,27,42,0.06)] p-8 md:p-12 border border-outline-variant/15">
+<form class="space-y-12">
+<!-- Form Header -->
+<div class="space-y-2">
+<span class="text-secondary font-label font-bold text-sm tracking-wider uppercase">Step 3: Subject Selection</span>
+<h2 class="text-2xl font-headline font-bold text-primary">What will you master?</h2>
+<p class="text-on-surface-variant">Choose your focus areas. Selecting 'All Subjects' provides a comprehensive integrated curriculum.</p>
+</div>
+<!-- Subject Bento Grid Selection -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- All Subjects (Priority Card) -->
+<div class="md:col-span-2 group cursor-pointer relative bg-primary-container rounded-lg p-8 transition-all duration-300 hover:scale-[1.01] shadow-lg shadow-primary/10">
+<div class="flex justify-between items-start">
+<div class="space-y-2">
+<h3 class="text-xl font-headline font-bold text-white">All Subjects</h3>
+<p class="text-primary-fixed-dim text-sm max-w-md">The most popular choice. Includes Physics, Chemistry, and Maths with integrated testing modules.</p>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-secondary-container flex items-center justify-center bg-secondary-container">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<div class="mt-6 flex gap-2">
+<span class="bg-primary/30 text-white px-3 py-1 rounded-full text-[10px] font-label uppercase tracking-tighter">Recommended</span>
+<span class="bg-primary/30 text-white px-3 py-1 rounded-full text-[10px] font-label uppercase tracking-tighter">Value Bundle</span>
+</div>
+</div>
+<!-- Individual Physics -->
+<div class="group cursor-pointer opacity-50 bg-surface-container rounded-lg p-6 transition-all duration-300 border-2 border-transparent">
+<div class="flex justify-between items-center mb-4">
+<div class="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-orange-500 shadow-sm">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant"></div>
+</div>
+<h3 class="text-lg font-headline font-bold text-primary">Physics</h3>
+<p class="text-on-surface-variant text-xs mt-2">Mechanics, Thermodynamics, and Quantum Essentials.</p>
+</div>
+<!-- Individual Chemistry -->
+<div class="group cursor-pointer opacity-50 bg-surface-container rounded-lg p-6 transition-all duration-300 border-2 border-transparent">
+<div class="flex justify-between items-center mb-4">
+<div class="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-tertiary shadow-sm">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant"></div>
+</div>
+<h3 class="text-lg font-headline font-bold text-primary">Chemistry</h3>
+<p class="text-on-surface-variant text-xs mt-2">Organic, Inorganic, and Physical analysis.</p>
+</div>
+<!-- Individual Maths -->
+<div class="md:col-span-2 group cursor-pointer opacity-50 bg-surface-container rounded-lg p-6 transition-all duration-300 border-2 border-transparent">
+<div class="flex justify-between items-center mb-4">
+<div class="w-12 h-12 rounded-lg bg-white flex items-center justify-center text-[#00A99D] shadow-sm">
+<span class="material-symbols-outlined" data-icon="functions">functions</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant"></div>
+</div>
+<h3 class="text-lg font-headline font-bold text-primary">Mathematics</h3>
+<p class="text-on-surface-variant text-xs mt-2">Advanced Calculus, Linear Algebra, and Probability.</p>
+</div>
+</div>
+<!-- CTA Actions -->
+<div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<button class="text-primary-fixed-variant font-headline font-bold text-sm flex items-center gap-2 hover:opacity-70 transition-all" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+                            Back to Batch Details
+                        </button>
+<div class="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
+<p class="text-xs text-on-surface-variant md:text-right italic">Individual choices disabled because <br class="hidden md:block"/> 'All Subjects' is currently selected.</p>
+<button class="w-full md:w-auto bg-primary text-white px-10 py-4 rounded-full font-headline font-extrabold tracking-tight shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all" type="submit">
+                                Review &amp; Confirm
+                            </button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Success Preview Section (Usually hidden, rendered here for visualization) -->
+<section class="max-w-7xl mx-auto px-6 mt-12 mb-24 hidden">
+<div class="bg-secondary-container/10 rounded-xl p-12 text-center space-y-6 relative overflow-hidden">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-20 h-20 bg-secondary-container rounded-full flex items-center justify-center mb-6 shadow-xl shadow-secondary-container/30">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h2 class="text-3xl font-headline font-extrabold text-primary">Application Received</h2>
+<p class="text-lg text-on-surface-variant max-w-xl mx-auto">Welcome to RUBY Science Academy, James Wilson. We are reviewing your registration for the <strong>Repeat Batch</strong>. An academic counselor will contact you at <strong>+91 98765 43210</strong> within 24 hours.</p>
+<div class="pt-8">
+<button class="bg-primary text-white px-8 py-3 rounded-full font-headline font-bold transition-all hover:scale-105">Download Prospectus</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-100 mt-24">
+<div class="max-w-7xl mx-auto py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-headline font-extrabold text-blue-900 text-lg">RUBY Science Academy</div>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-blue-600 transition-opacity font-label text-xs uppercase tracking-widest" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-blue-600 transition-opacity font-label text-xs uppercase tracking-widest" href="#">Terms of Service</a>
+<a class="text-slate-400 hover:text-blue-600 transition-opacity font-label text-xs uppercase tracking-widest" href="#">FAQ</a>
+</div>
+<p class="text-slate-400 font-label text-[10px] uppercase tracking-widest">© 2024 RUBY Science Academy. All Rights Reserved. Developed by AxisX Studio</p>
+</div>
+</footer>
+</body></html>
