@@ -51,12 +51,13 @@ export function LatestPostPopup({ post }: LatestPostPopupProps) {
       <div 
         className={`group relative w-full max-w-lg overflow-hidden bg-white shadow-2xl transition-all duration-500 transform ${open ? 'scale-100 translate-y-0 opacity-100' : 'scale-90 translate-y-10 opacity-0'}`}
       >
-        {/* Close Button */}
+        {/* Close Button - Glassmorphism */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 z-30 flex size-9 items-center justify-center rounded-none bg-white text-primary hover:bg-slate-50 transition-all duration-200 border border-slate-200 shadow-sm"
+          className="absolute top-4 right-4 z-40 flex size-8 items-center justify-center rounded-full bg-black/20 backdrop-blur-lg text-white hover:bg-black/40 transition-all duration-300 border border-white/20 shadow-xl group/close"
+          aria-label="Close"
         >
-          <X className="size-5" />
+          <X className="size-4 transition-transform duration-500 group-hover/close:rotate-90" />
         </button>
 
         {/* Content Container */}
@@ -70,12 +71,12 @@ export function LatestPostPopup({ post }: LatestPostPopupProps) {
             onError={() => console.error("Image failed to load")}
           />
           
-          {/* Announcement Badge - Sharp corners */}
-          <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1.5 bg-white shadow-sm border border-slate-100 transition-opacity duration-300 group-hover:opacity-0">
-            <div className="flex size-6 items-center justify-center bg-cyan text-white">
-              <Bell className="size-3" />
+          {/* Announcement Badge - Professional Glassmorphism */}
+          <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-2.5 py-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-lg transition-all duration-500 group-hover:bg-white/20">
+            <div className="flex size-5 items-center justify-center rounded-full bg-cyan/80 text-white shadow-[0_0_10px_rgba(6,182,212,0.5)]">
+              <Bell className="size-2.5 animate-bounce" />
             </div>
-            <span className="text-[10px] font-black uppercase tracking-widest text-primary">New Update</span>
+            <span className="text-[9px] font-black uppercase tracking-[0.25em] text-white">New Update</span>
           </div>
 
           {/* Interactive Overlay (Sharp corners, no white background) */}
