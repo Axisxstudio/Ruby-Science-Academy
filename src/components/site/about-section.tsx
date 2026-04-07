@@ -1,5 +1,6 @@
 import { Award, Users, GraduationCap } from "lucide-react";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
+import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { cn } from "@/lib/utils";
 
 const features = [
@@ -7,19 +8,19 @@ const features = [
     title: "Academic Excellence",
     description: "Consistent practice focused on helping students achieve top grades and build strong foundations.",
     icon: Award,
-    stats: "95% Pass Rate"
+    stats: <><AnimatedCounter end={95} suffix="%" /> Pass Rate</>
   },
   {
     title: "Expert Teachers",
-    description: "Experienced lecturers who understand Tamil medium science stream requirements and exam patterns.",
+    description: "Experienced Teachers who understand Tamil medium science stream requirements and exam patterns.",
     icon: GraduationCap,
-    stats: "7+ Years Experience"
+    stats: <><AnimatedCounter end={7} suffix="+" /> Years Experience</>
   },
   {
     title: "Personalized Guidance",
     description: "Individual attention and mentoring to help every student reach their full potential.",
     icon: Users,
-    stats: "1:15 Teacher Ratio"
+    stats: <>1:<AnimatedCounter end={15} /> Teacher Ratio</>
   },
 ];
 
@@ -50,15 +51,15 @@ export function AboutSection() {
             
             <div className="grid grid-cols-3 gap-6 py-6 border-y border-slate-200 animate-fade-in-up delay-300">
               <div className="text-center group transition-transform hover-lift">
-                <div className="text-3xl-pro font-black text-blue-600 font-display">100+</div>
+                <div className="text-3xl-pro font-black text-blue-600 font-display"><AnimatedCounter end={100} suffix="+" /></div>
                 <div className="text-sm-pro font-medium text-slate-500 mt-1">Students</div>
               </div>
               <div className="text-center group transition-transform hover-lift">
-                <div className="text-3xl-pro font-black text-blue-600 font-display">95%</div>
+                <div className="text-3xl-pro font-black text-blue-600 font-display"><AnimatedCounter end={95} suffix="%" /></div>
                 <div className="text-sm-pro font-medium text-slate-500 mt-1">Success Rate</div>
               </div>
               <div className="text-center group transition-transform hover-lift">
-                <div className="text-3xl-pro font-black text-blue-600 font-display">7+</div>
+                <div className="text-3xl-pro font-black text-blue-600 font-display"><AnimatedCounter end={7} suffix="+" /></div>
                 <div className="text-sm-pro font-medium text-slate-500 mt-1">Years</div>
               </div>
             </div>

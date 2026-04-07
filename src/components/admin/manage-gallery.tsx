@@ -218,7 +218,7 @@ export function ManageGallery({ initialItems, live }: ManageGalleryProps) {
                       />
                       <StatusPill label={item.category} tone="accent" />
                     </div>
-                    <h3 className="mt-4 font-display text-2xl font-extrabold text-primary">
+                    <h3 className="mt-4 font-display text-base font-bold text-primary leading-snug tracking-tight">
                       {item.title}
                     </h3>
                     <div className="mt-6 flex flex-wrap items-center justify-between gap-4">

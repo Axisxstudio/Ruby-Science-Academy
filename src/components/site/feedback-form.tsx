@@ -90,6 +90,7 @@ export function FeedbackForm() {
     const { error } = await supabase.from("feedbacks").insert({
       name: data.name,
       role_type: data.roleType,
+      subject: data.selectedSubjects && data.selectedSubjects.length > 0 ? data.selectedSubjects[0] : "All",
       selected_subjects: data.selectedSubjects,
       rating: data.rating,
       description: data.description,

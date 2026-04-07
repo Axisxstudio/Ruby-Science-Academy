@@ -4,6 +4,7 @@ import { ArrowRight, Award, BookOpenCheck, CheckCircle2, MapPin, Users } from "l
 import { Button } from "@/components/ui/button";
 import { SubjectChip } from "@/components/site/subject-chip";
 import { cn } from "@/lib/utils";
+import { AnimatedCounter } from "@/components/ui/animated-counter";
 import type { SiteSettings, Teacher } from "@/lib/types";
 
 interface HeroSectionProps {
@@ -55,12 +56,15 @@ export function HeroSection({ settings, teachers }: HeroSectionProps) {
           
           {/* Main Headline */}
           <div className="space-y-4 max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl font-semibold text-cyan tracking-wide animate-fade-in-up">
+              Welcome to RUBY Science Academy
+            </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white animate-fade-in-up delay-100">
               2028 A/L Science Stream
             </h1>
             
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white/90 animate-fade-in-up delay-200">
-              Master Physics, Chemistry & Maths with Expert Lecturers
+              Master Physics, Chemistry & Maths with Expert Teachers
             </h2>
             
             <p className="text-lg text-white/80 animate-fade-in-up delay-300">
@@ -77,7 +81,7 @@ export function HeroSection({ settings, teachers }: HeroSectionProps) {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-white">95% Pass Rate</h3>
+                <h3 className="text-lg font-semibold text-white"><AnimatedCounter end={95} suffix="%" /> Pass Rate</h3>
               </div>
             </div>
             
@@ -99,7 +103,7 @@ export function HeroSection({ settings, teachers }: HeroSectionProps) {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-white">Experienced Lecturers</h3>
+                <h3 className="text-lg font-semibold text-white">Experienced Teachers</h3>
               </div>
             </div>
           </div>

@@ -21,39 +21,38 @@ export function GallerySection({ items }: GallerySectionProps) {
 
   const renderMedia = (item: GalleryItem, index: number) => {
     const isHovered = hoveredIndex === index;
-    
-    if (item.media_type === 'video' && item.video_url) {
+    if (item.media_type === 'video') {
       return (
         <div className="relative aspect-[4/5] overflow-hidden group">
-          {/* Video Thumbnail */}
-          <div className="relative w-full h-full">
-            <Image
+          {/* Video Preview */}
+          <div className="relative w-full h-full bg-black">
+            <video
               src={item.image_url}
-              alt={item.title}
-              fill
-              className="object-cover pointer-events-none"
-              sizes="320px"
-              draggable={false}
+              className="w-full h-full object-contain pointer-events-none opacity-90"
+              autoPlay
+              muted
+              loop
+              playsInline
             />
             {/* Play Button Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
-              <div className="w-16 h-16 rounded-full-pro bg-white/90 backdrop-blur-sm flex items-center justify-center transform scale-90 group-hover:scale-100 transition-transform duration-300">
-                <Play className="size-6 text-blue-600 ml-1" fill="currentColor" />
+            <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
+              <div className="w-16 h-16 rounded-full-pro bg-white/90 backdrop-blur-sm flex items-center justify-center transform scale-90 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                <Play className="size-6 text-cyan ml-1" fill="currentColor" />
               </div>
             </div>
           </div>
-          
+
           {/* Hover Details */}
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-4 transform translate-y-full transition-all duration-300 group-hover:translate-y-0 pointer-events-none">
-            <p className="text-xs-pro font-bold uppercase tracking-wider text-white/80 mb-2">{item.category}</p>
-            <h3 className="font-display text-lg font-bold text-white mb-2">{item.title}</h3>
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4 transform translate-y-full transition-all duration-300 group-hover:translate-y-0 pointer-events-none">
+            <p className="text-[10px] font-bold uppercase tracking-wider text-white/80 mb-1.5">{item.category}</p>
+            <h3 className="font-display text-sm font-bold text-white mb-2 line-clamp-3 leading-snug">{item.title}</h3>
             {isHovered && (
               <div className="space-y-2 animate-fade-in">
-                <p className="text-sm-pro text-white/90 leading-relaxed">
-                  {item.description || 'Experience the vibrant learning environment at RUBY Science Academy'}
+                <p className="text-xs text-white/90 leading-relaxed line-clamp-2">
+                  {item.description || 'Watch the vibrant learning environment at RUBY Science Academy'}
                 </p>
-                <div className="flex items-center gap-2 text-xs-pro text-white/70">
-                  <span>Click to view full video</span>
+                <div className="flex items-center gap-2 text-[10px] text-white/70 font-semibold uppercase tracking-widest mt-1">
+                  <span>Click to watch reel</span>
                 </div>
               </div>
             )}
@@ -61,29 +60,29 @@ export function GallerySection({ items }: GallerySectionProps) {
         </div>
       );
     }
-    
+
     // Image rendering
     return (
-      <div className="relative aspect-[4/5] overflow-hidden group">
+      <div className="relative aspect-[4/5] overflow-hidden group bg-black">
         <Image
           src={item.image_url}
           alt={item.title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105 pointer-events-none"
+          className="object-contain transition-transform duration-500 group-hover:scale-105 pointer-events-none"
           sizes="320px"
           draggable={false}
         />
-        
+
         {/* Hover Details */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-4 transform translate-y-full transition-all duration-300 group-hover:translate-y-0 pointer-events-none">
-          <p className="text-xs-pro font-bold uppercase tracking-wider text-white/80 mb-2">{item.category}</p>
-          <h3 className="font-display text-lg font-bold text-white mb-2">{item.title}</h3>
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4 transform translate-y-full transition-all duration-300 group-hover:translate-y-0 pointer-events-none">
+          <p className="text-[10px] font-bold uppercase tracking-wider text-white/80 mb-1.5">{item.category}</p>
+          <h3 className="font-display text-sm font-bold text-white mb-2 line-clamp-3 leading-snug">{item.title}</h3>
           {isHovered && (
             <div className="space-y-2 animate-fade-in">
-              <p className="text-sm-pro text-white/90 leading-relaxed">
+              <p className="text-xs text-white/90 leading-relaxed line-clamp-2">
                 {item.description || 'Experience the vibrant learning environment at RUBY Science Academy'}
               </p>
-              <div className="flex items-center gap-2 text-xs-pro text-white/70">
+              <div className="flex items-center gap-2 text-[10px] text-white/70 font-semibold uppercase tracking-widest mt-1">
                 <span>Click to view full image</span>
               </div>
             </div>
@@ -100,7 +99,7 @@ export function GallerySection({ items }: GallerySectionProps) {
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-200/20 rounded-full blur-3xl animate-float-delayed" />
       </div>
-      
+
       <div className="section-shell relative z-10 pb-10">
         <div className="mb-12 max-w-3xl">
           <div className="space-y-4">
@@ -121,7 +120,7 @@ export function GallerySection({ items }: GallerySectionProps) {
           <Swiper
             slidesPerView="auto"
             spaceBetween={20}
-            loop={true}
+            loop={items.length > 3}
             speed={10000}
             grabCursor={true}
             autoplay={{
@@ -134,14 +133,13 @@ export function GallerySection({ items }: GallerySectionProps) {
             modules={[Autoplay, FreeMode]}
             className="py-4 marquee-swiper"
           >
-            {/* Duplicating items to guarantee infinite loop works even if there are very few photos */}
-            {[...items, ...items, ...items].map((item, index) => (
+            {items.map((item, index) => (
               <SwiperSlide key={`${item.id}-${index}`} className="!h-auto max-w-[320px] cursor-grab">
                 <div
                   role="button"
                   tabIndex={0}
-                  onClick={() => setActiveIndex(index % items.length)}
-                  onMouseEnter={() => setHoveredIndex(index % items.length)}
+                  onClick={() => setActiveIndex(index)}
+                  onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                   className="block h-full w-full text-left group"
                 >

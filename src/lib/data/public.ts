@@ -122,8 +122,13 @@ export async function getPublicPageData(): Promise<PublicDataResult> {
         .eq("active_status", true),
     ]);
 
+  const safeSettings = (settingsRes.data as SiteSettings | null) ?? defaultSiteSettings;
+  if (safeSettings.admin_password) {
+    delete safeSettings.admin_password;
+  }
+
   return {
-    settings: (settingsRes.data as SiteSettings | null) ?? defaultSiteSettings,
+    settings: safeSettings,
     teachers: teachersRes.error
       ? demoTeachers
       : ((teachersRes.data ?? demoTeachers) as Teacher[]),

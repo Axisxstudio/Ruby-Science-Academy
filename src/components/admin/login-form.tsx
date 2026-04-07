@@ -11,8 +11,8 @@ import { Label } from "@/components/ui/label";
 import { createBrowserSupabaseClient } from "@/lib/supabase/browser";
 
 export function AdminLoginForm() {
-  const [email, setEmail] = useState("vijayakumarvithusan2912@gmail.com");
-  const [password, setPassword] = useState("RubyAdmin@2026");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
 

@@ -15,6 +15,7 @@ import { TestimonialsSection } from "@/components/site/testimonials-section";
 import { WhatsAppFloat } from "@/components/site/whatsapp-float";
 import { LatestPostPopup } from "@/components/site/latest-post-popup";
 import { PostsSection } from "@/components/site/posts-section";
+import { ScrollingBanner } from "@/components/site/scrolling-banner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getPublicPageData } from "@/lib/data/public";
@@ -52,20 +53,7 @@ export default async function Home() {
       <div className="min-h-screen bg-background overflow-x-hidden pt-20">
         <SiteNavbar />
         <LatestPostPopup post={latestPost} />
-
-        {!live ? (
-          <div className="border-b border-cyan/20 bg-cyan/10">
-            <div className="section-shell flex flex-col gap-2 py-3 text-sm text-primary sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex items-center gap-2">
-                <Sparkles className="size-4" />
-                Site is currently running in preview mode using demo content.
-              </div>
-              <a href="/admin/login" className="font-semibold underline underline-offset-4">
-                Open admin login
-              </a>
-            </div>
-          </div>
-        ) : null}
+        <ScrollingBanner phone={settings.contact_phone} />
 
         <main>
           <SectionReveal threshold={0}>
@@ -93,7 +81,7 @@ export default async function Home() {
           </SectionReveal>
 
           <SectionReveal>
-            <section className="section-padding">
+            <section className="py-10 sm:py-14">
               <div className="section-shell">
                 <div className="mb-12 max-w-4xl">
                   <span className="inline-block px-4 py-2 rounded-full-pro text-xs-pro font-bold uppercase tracking-[0.2em] bg-blue-100 text-blue-700 border border-blue-200 shadow-sm-pro mb-6">
@@ -103,7 +91,7 @@ export default async function Home() {
                     A focused learning atmosphere families trust for results.
                   </h2>
                   <p className="mt-6 max-w-2xl text-base-pro leading-relaxed text-slate-600">
-                    We are dedicated to creating the ultimate science stream experience with expert lecturers and comprehensive support to ensure every student's success.
+                    We are dedicated to creating the ultimate science stream experience with expert Teachers and comprehensive support to ensure every student's success.
                   </p>
                 </div>
 

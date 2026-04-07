@@ -183,11 +183,11 @@ export function ManagePosts({ initialItems, live }: ManagePostsProps) {
               description="Create your first social announcement or update."
             />
           ) : (
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
               {filtered.map((item) => (
                 <div 
                   key={item.id}
-                  className="group flex flex-col rounded-3xl border border-border-soft bg-white/50 hover:shadow-lg-pro transition-all-smooth overflow-hidden"
+                  className="group flex flex-col rounded-2xl border border-border-soft bg-white/50 hover:shadow-lg-pro transition-all-smooth overflow-hidden"
                 >
                   <div className="relative aspect-square overflow-hidden">
                     <Image
@@ -195,36 +195,36 @@ export function ManagePosts({ initialItems, live }: ManagePostsProps) {
                       alt="Post image"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
                     />
-                    <div className="absolute top-4 right-4">
+                    <div className="absolute top-3 right-3">
                       <StatusPill
                         label={item.active_status ? "Active" : "Draft"}
                         tone={item.active_status ? "success" : "warning"}
                       />
                     </div>
                   </div>
-                  <CardContent className="p-6 flex flex-col flex-1">
-                    <p className="text-sm leading-relaxed text-muted/80 line-clamp-3 mb-6 flex-1 italic group-hover:text-primary transition-colors">
+                  <CardContent className="p-4 flex flex-col flex-1">
+                    <p className="text-xs leading-relaxed text-muted/80 line-clamp-3 mb-4 flex-1 italic group-hover:text-primary transition-colors">
                       "{item.description}"
                     </p>
                     
-                    <div className="flex items-center justify-between gap-4 pt-4 border-t border-slate-100">
+                    <div className="flex items-center justify-between gap-3 pt-3 border-t border-slate-100">
                       <div className="overflow-hidden">
-                        <p className="text-[10px] font-black uppercase tracking-[0.15em] text-muted/40">Post ID</p>
-                        <p className="text-[11px] font-mono text-muted/60 truncate max-w-[120px]">{item.id}</p>
+                        <p className="text-[9px] font-black uppercase tracking-[0.15em] text-muted/40">Post ID</p>
+                        <p className="text-[10px] font-mono text-muted/60 truncate max-w-[80px]">{item.id}</p>
                       </div>
-                      <div className="flex gap-2">
-                        <Button variant="ghost" size="icon" className="size-9 rounded-xl text-muted hover:bg-surface-soft hover:text-primary transition-all-smooth" onClick={() => openEdit(item)}>
-                          <Edit2 className="size-4" />
+                      <div className="flex gap-1.5">
+                        <Button variant="ghost" size="icon" className="size-8 rounded-lg text-muted hover:bg-surface-soft hover:text-primary transition-all-smooth" onClick={() => openEdit(item)}>
+                          <Edit2 className="size-3.5" />
                         </Button>
                         <Button
                           variant="ghost"
                           size="icon"
-                          className="size-9 rounded-xl text-muted hover:bg-chemistry/10 hover:text-chemistry transition-all-smooth"
+                          className="size-8 rounded-lg text-muted hover:bg-chemistry/10 hover:text-chemistry transition-all-smooth"
                           onClick={() => deleteItem(item)}
                         >
-                          <Trash2 className="size-4" />
+                          <Trash2 className="size-3.5" />
                         </Button>
                       </div>
                     </div>
