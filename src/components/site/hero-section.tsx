@@ -24,13 +24,13 @@ export function HeroSection({ settings, teachers }: HeroSectionProps) {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[85vh] lg:min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Dynamic Background */}
       <div className="absolute inset-0">
         <Image
           src="/ruby-logo.jpeg"
-          alt="RUBY Science Academy"
+          alt="RUBY SCIENCE ACADEMY"
           fill
           className="object-cover opacity-[0.03] mix-blend-overlay grayscale"
           sizes="100vw"
@@ -61,7 +61,7 @@ export function HeroSection({ settings, teachers }: HeroSectionProps) {
               
               <div className="space-y-4 lg:space-y-6">
                 <p className="text-xs sm:text-sm font-black text-white/30 uppercase tracking-[0.5em] animate-in fade-in slide-in-from-left-4 duration-700 delay-150">
-                  Welcome to RUBY Academy
+                  Welcome to RUBY SCIENCE ACADEMY
                 </p>
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[0.9] text-white animate-in fade-in slide-in-from-left-4 duration-1000 delay-300">
                   2028 A/L <br />
@@ -121,7 +121,7 @@ export function HeroSection({ settings, teachers }: HeroSectionProps) {
             </div>
           </div>
 
-          <div className="relative group perspective-1000 mt-12 lg:mt-0 animate-in fade-in zoom-in-95 duration-1000 delay-500">
+          <div className="hidden lg:block relative group perspective-1000 mt-12 lg:mt-0 animate-in fade-in zoom-in-95 duration-1000 delay-500">
             {/* Background Accent Glow */}
             <div className="absolute inset-x-0 -inset-y-10 bg-cyan/10 blur-[130px] rounded-full scale-90 group-hover:scale-100 transition-transform duration-1000" />
             
@@ -132,7 +132,7 @@ export function HeroSection({ settings, teachers }: HeroSectionProps) {
                     <div className="relative w-[80%] h-[80%] transition-transform duration-[8s] group-hover:scale-[1.08]">
                       <Image
                         src="/ruby-logo.jpeg"
-                        alt="RUBY Science Academy logo"
+                        alt="RUBY SCIENCE ACADEMY logo"
                         fill
                         className="object-contain"
                         priority
@@ -142,7 +142,7 @@ export function HeroSection({ settings, teachers }: HeroSectionProps) {
                </div>
 
               {/* Floating Status Badge Card */}
-              <div className="absolute -bottom-4 -right-1 lg:-right-4 w-44 lg:w-48 h-auto animate-float z-20">
+              <div className="hidden lg:block absolute -bottom-4 -right-1 lg:-right-4 w-44 lg:w-48 h-auto animate-float z-20">
                 <div className="bg-white/95 backdrop-blur-3xl border border-white p-3 lg:p-4 rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.12)]">
                   <div className="flex items-center gap-2 mb-1.5">
                     <span className="px-2 py-0.5 rounded-full bg-cyan/10 text-[7px] font-black text-cyan uppercase tracking-widest leading-none">Registration</span>

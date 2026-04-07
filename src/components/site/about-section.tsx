@@ -26,7 +26,7 @@ const features = [
 
 export function AboutSection() {
   return (
-    <section className="pt-24 pb-8 lg:pt-32 lg:pb-12 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
+    <section id="about" className="pt-14 pb-8 lg:pt-32 lg:pb-12 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-float" />

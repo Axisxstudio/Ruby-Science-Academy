@@ -78,7 +78,7 @@ export function SiteNavbar() {
         </div>
 
         <button
-          className="ring-focus inline-flex size-11 items-center justify-center rounded-full border border-border-soft bg-white text-primary lg:hidden"
+          className="ring-focus inline-flex size-11 items-center justify-center rounded-full bg-white text-primary lg:hidden"
           onClick={() => setOpen((value) => !value)}
           type="button"
           aria-label="Open menu"
@@ -111,7 +111,7 @@ export function SiteNavbar() {
             </div>
           </div>
           <button
-            className="ring-focus inline-flex size-11 items-center justify-center rounded-full border border-slate-100 bg-white text-primary"
+            className="ring-focus inline-flex size-11 items-center justify-center rounded-full bg-white text-primary"
             onClick={() => setOpen(false)}
             type="button"
           >

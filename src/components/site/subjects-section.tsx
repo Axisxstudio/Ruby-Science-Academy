@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+import { ArrowUpRight, Plus, Eye, X as CloseIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SubjectChip } from "@/components/site/subject-chip";
@@ -34,53 +36,78 @@ export function SubjectsSection({ teachers }: SubjectsSectionProps) {
 
         <div className="grid gap-8 lg:grid-cols-3">
           {teachers.map((teacher, index) => (
-            <Card
-              key={teacher.id}
-              className={cn("group relative overflow-hidden rounded-[1.5rem] border-0 bg-white shadow-md-pro transition-all-smooth hover:shadow-xl", index === 1 && "lg:translate-y-4")}
-            >
-              {/* Header-like Badge (Subject) */}
-              <div className="absolute top-4 left-4 z-20">
-                <div className={cn(
-                  "px-3 py-1 text-[10px] font-black uppercase tracking-[0.2em] shadow-sm rounded-full",
-                  subjectThemeMap[teacher.subject].soft
-                )}>
-                  {teacher.subject}
-                </div>
-              </div>
-
-              <div className="relative aspect-square overflow-hidden bg-slate-100">
-                <Image
-                  src={teacher.image_url}
-                  alt={teacher.name}
-                  fill
-                  className="object-cover transition duration-700 group-hover:scale-105"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                />
-
-                {/* Instagram-style Transparent Gray Overlay with 8px top radius */}
-                <div className="absolute inset-x-0 bottom-0 z-30 translate-y-full bg-slate-900/80 p-6 backdrop-blur-md transition-transform duration-500 rounded-t-[1.5rem] group-hover:translate-y-0">
-                  <p className="text-sm font-medium leading-relaxed text-white">
-                    {teacher.short_bio}
-                  </p>
-                </div>
-              </div>
-
-              {/* Instagram-style Footer */}
-              <div className="border-t border-slate-100 p-6">
-                <h3 className="font-display text-xl font-black tracking-tight text-primary-deep uppercase">
-                  {teacher.name}
-                </h3>
-                <div className="mt-2 flex items-center gap-2">
-                  <div className="h-px w-4 bg-bright-blue/30" />
-                  <p className="text-[11px] font-bold text-muted/60 uppercase tracking-widest">
-                    {teacher.qualifications}
-                  </p>
-                </div>
-              </div>
-            </Card>
+            <TeacherCard key={teacher.id} teacher={teacher} index={index} />
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function TeacherCard({ teacher, index }: { teacher: Teacher; index: number }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <Card
+      className={cn(
+        "group relative overflow-hidden rounded-[2rem] border-0 bg-white shadow-md-pro transition-all-smooth hover:shadow-xl",
+        index === 1 && "lg:translate-y-4"
+      )}
+    >
+      {/* Header-like Badge (Subject) */}
+      <div className="absolute top-5 left-5 z-20">
+        <div className="px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.25em] shadow-sm rounded-full bg-[#f5f5f5]/30 backdrop-blur-md border border-white/20 text-slate-900">
+          {teacher.subject}
+        </div>
+      </div>
+
+      {/* Mobile View Toggle */}
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="lg:hidden absolute top-5 right-5 z-20 p-2.5 rounded-full bg-slate-900/40 backdrop-blur-md border border-white/20 text-white transition-all active:scale-95"
+      >
+        {isOpen ? <CloseIcon className="size-4" /> : <Eye className="size-4" />}
+      </button>
+
+      <div className="relative aspect-square overflow-hidden bg-slate-100">
+        <Image
+          src={teacher.image_url}
+          alt={teacher.name}
+          fill
+          className="object-cover transition duration-700 group-hover:scale-105"
+          sizes="(max-width: 1024px) 100vw, 33vw"
+        />
+
+        {/* Info Overlay */}
+        <div 
+          className={cn(
+            "absolute inset-x-0 bottom-0 z-30 bg-[#0f172a]/80 p-8 backdrop-blur-xl transition-all duration-500 rounded-t-[2rem] border-t border-white/10",
+            "lg:translate-y-full lg:group-hover:translate-y-0", // Desktop: Hover
+            isOpen ? "translate-y-0" : "translate-y-full" // Mobile: Toggle
+          )}
+        >
+          <div className="mb-4 flex items-center gap-2">
+             <div className="h-px w-6 bg-cyan" />
+             <p className="text-[10px] font-black uppercase tracking-[0.2em] text-cyan">Profile Detail</p>
+          </div>
+          <p className="text-sm-pro font-medium leading-[1.8] text-white/90">
+            {teacher.short_bio}
+          </p>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="border-t border-slate-100 p-8">
+        <h3 className="font-display text-2xl font-black tracking-tight text-[#0f4c81] uppercase leading-none">
+          {teacher.name}
+        </h3>
+        <div className="mt-4 flex items-center gap-3">
+          <div className="h-px w-5 bg-cyan/40" />
+          <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-none">
+            {teacher.qualifications}
+          </p>
+        </div>
+      </div>
+    </Card>
   );
 }
