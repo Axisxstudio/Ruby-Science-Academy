@@ -16,7 +16,7 @@ const buttonVariants = cva(
           "border border-border-soft bg-white/70 text-primary hover:bg-surface-soft",
         ghost: "text-primary hover:bg-primary/8",
         accent:
-          "bg-cyan text-primary-deep shadow-[0_16px_32px_rgba(0,194,255,0.22)] hover:-translate-y-0.5 hover:bg-cyan/90",
+          "bg-gradient-to-r from-cyan to-bright-blue text-white shadow-[0_16px_32px_rgba(6,182,212,0.22)] hover:-translate-y-0.5 hover:brightness-110",
         destructive:
           "bg-chemistry text-white shadow-[0_16px_30px_rgba(255,107,44,0.18)] hover:bg-chemistry/90",
       },

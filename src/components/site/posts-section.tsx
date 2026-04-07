@@ -20,8 +20,8 @@ export function PostsSection({ posts }: PostsSectionProps) {
           <span className="inline-block px-4 py-2 rounded-full-pro text-xs-pro font-bold uppercase tracking-[0.2em] bg-blue-100 text-blue-700 border border-blue-200 shadow-sm-pro mb-6">
             Latest Updates
           </span>
-          <h2 className="text-balance font-display text-4xl-pro sm:text-5xl-pro font-black tracking-tight text-primary leading-tight">
-            Academy Feed
+          <h2 className="text-balance mt-4 font-display text-3xl-pro font-black tracking-tight text-slate-900 sm:text-5xl-pro lg:text-6xl-pro leading-tight animate-fade-in-up delay-100">
+            Academy <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Update Feed.</span>
           </h2>
           <p className="mt-4 max-w-2xl text-base-pro leading-relaxed text-slate-600">
             Stay updated with our latest announcements, student achievements, and classroom highlights.

@@ -13,7 +13,7 @@ interface SubjectsSectionProps {
 
 export function SubjectsSection({ teachers }: SubjectsSectionProps) {
   return (
-    <section id="subjects" className="bg-[linear-gradient(180deg,_rgba(217,236,255,0.3),_rgba(247,251,255,1))] py-20 lg:py-28">
+    <section id="subjects" className="relative bg-[#fcfdfe] pt-8 pb-8 lg:pt-12 lg:pb-12 overflow-hidden">
       <div className="section-shell">
         <div className="mb-12 flex flex-col gap-4 lg:mb-16 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
@@ -22,12 +22,12 @@ export function SubjectsSection({ teachers }: SubjectsSectionProps) {
             </span>
             <h2
               id="teachers"
-              className="text-balance mt-4 font-display text-4xl font-extrabold tracking-tight text-primary sm:text-5xl"
+              className="text-balance mt-4 font-display text-3xl-pro font-black tracking-tight text-slate-900 sm:text-5xl-pro lg:text-6xl-pro leading-tight animate-fade-in-up delay-100"
             >
-              Expert teachers for Chemistry, Physics, and Maths.
+              Expert teachers for <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Chemistry, Physics, and Maths.</span>
             </h2>
           </div>
-          <p className="max-w-xl text-base leading-7 text-muted">
+          <p className="max-w-lg text-sm sm:text-base font-bold leading-relaxed text-muted/70 tracking-wide lg:max-w-[440px]">
             Learn about our subjects from expert teachers who help you understand everything and get the best grades.
           </p>
         </div>
@@ -36,12 +36,12 @@ export function SubjectsSection({ teachers }: SubjectsSectionProps) {
           {teachers.map((teacher, index) => (
             <Card
               key={teacher.id}
-              className={cn("group relative overflow-hidden rounded-[3px] border-0 bg-white shadow-md-pro transition-all-smooth hover:shadow-xl", index === 1 && "lg:translate-y-4")}
+              className={cn("group relative overflow-hidden rounded-[1.5rem] border-0 bg-white shadow-md-pro transition-all-smooth hover:shadow-xl", index === 1 && "lg:translate-y-4")}
             >
               {/* Header-like Badge (Subject) */}
               <div className="absolute top-4 left-4 z-20">
                 <div className={cn(
-                  "px-3 py-1 text-[10px] font-black uppercase tracking-[0.2em] shadow-sm",
+                  "px-3 py-1 text-[10px] font-black uppercase tracking-[0.2em] shadow-sm rounded-full",
                   subjectThemeMap[teacher.subject].soft
                 )}>
                   {teacher.subject}
@@ -58,7 +58,7 @@ export function SubjectsSection({ teachers }: SubjectsSectionProps) {
                 />
 
                 {/* Instagram-style Transparent Gray Overlay with 8px top radius */}
-                <div className="absolute inset-x-0 bottom-0 z-30 translate-y-full bg-slate-900/60 p-6 backdrop-blur-md transition-transform duration-500 rounded-t-[8px] group-hover:translate-y-0">
+                <div className="absolute inset-x-0 bottom-0 z-30 translate-y-full bg-slate-900/80 p-6 backdrop-blur-md transition-transform duration-500 rounded-t-[1.5rem] group-hover:translate-y-0">
                   <p className="text-sm font-medium leading-relaxed text-white">
                     {teacher.short_bio}
                   </p>
@@ -66,11 +66,11 @@ export function SubjectsSection({ teachers }: SubjectsSectionProps) {
               </div>
 
               {/* Instagram-style Footer */}
-              <div className="border-t border-slate-100 p-5">
-                <h3 className="font-display text-lg font-black tracking-tight text-primary uppercase">
+              <div className="border-t border-slate-100 p-6">
+                <h3 className="font-display text-xl font-black tracking-tight text-primary-deep uppercase">
                   {teacher.name}
                 </h3>
-                <div className="mt-1 flex items-center gap-2">
+                <div className="mt-2 flex items-center gap-2">
                   <div className="h-px w-4 bg-bright-blue/30" />
                   <p className="text-[11px] font-bold text-muted/60 uppercase tracking-widest">
                     {teacher.qualifications}

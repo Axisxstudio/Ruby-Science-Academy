@@ -26,7 +26,7 @@ const features = [
 
 export function AboutSection() {
   return (
-    <section className="section-padding bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
+    <section className="pt-24 pb-8 lg:pt-32 lg:pb-12 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-float" />
@@ -40,7 +40,7 @@ export function AboutSection() {
               <span className="inline-block px-4 py-2 rounded-full-pro text-xs-pro font-bold uppercase tracking-widest bg-blue-100 text-blue-700 border border-blue-200 shadow-sm-pro animate-fade-in">
                 About RUBY Science Academy
               </span>
-              <h2 className="text-3xl-pro sm:text-4xl-pro lg:text-5xl-pro font-black text-slate-900 leading-tight font-display animate-fade-in-up delay-100">
+              <h2 className="text-3xl-pro sm:text-5xl-pro lg:text-6xl-pro font-black text-slate-900 leading-tight font-display animate-fade-in-up delay-100">
                 Excellence in <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">A/L Science</span> Education
               </h2>
               <p className="text-base-pro leading-relaxed text-slate-600 max-w-lg animate-fade-in-up delay-200">

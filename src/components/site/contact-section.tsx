@@ -62,9 +62,8 @@ export function ContactSection({ settings }: ContactSectionProps) {
         <span className="inline-block px-4 py-2 rounded-full-pro text-xs-pro font-bold uppercase tracking-[0.2em] bg-blue-100 text-blue-700 border border-blue-200 shadow-sm-pro">
           Contact Details
         </span>
-        <h2 className="text-balance mt-4 font-display text-4xl font-extrabold tracking-tight text-primary sm:text-5xl animate-fade-in-up delay-100">
-          <span className="hidden md:inline">Connect with us effortlessly via WhatsApp, social media, or the form below.</span>
-          <span className="md:hidden">Connect with us effortlessly.</span>
+        <h2 className="text-balance mt-4 font-display text-3xl-pro font-black tracking-tight text-slate-900 sm:text-5xl-pro lg:text-6xl-pro leading-tight animate-fade-in-up delay-100">
+          Connect with us <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">effortlessly.</span>
         </h2>
       </div>
 
@@ -94,7 +93,7 @@ export function ContactSection({ settings }: ContactSectionProps) {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <Button asChild variant="accent" className="rounded-full px-6">
+              <Button asChild className="rounded-full px-8 h-12 bg-[#25D366] hover:bg-[#20ba5a] text-white shadow-[0_12px_24px_rgba(37,211,102,0.25)] border-0 transition-all duration-300 hover:scale-[1.03] active:scale-95">
                 <Link
                   href={`https://wa.me/${settings.whatsapp_number.replace(/[^\d]/g, "")}`}
                   target="_blank"

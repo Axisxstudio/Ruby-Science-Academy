@@ -88,8 +88,8 @@ export function TestimonialsSection({ feedbacks }: TestimonialsSectionProps) {
           <span className="inline-block px-4 py-2 rounded-full-pro text-xs-pro font-bold uppercase tracking-[0.2em] bg-blue-100 text-blue-700 border border-blue-200 shadow-sm-pro mb-4">
             Testimonials
           </span>
-          <h2 className="text-balance mt-4 font-display text-4xl font-extrabold tracking-tight text-primary sm:text-5xl">
-            Real experiences and perspectives from the RUBY Science Academy community.
+          <h2 className="text-balance mt-4 font-display text-3xl-pro font-black tracking-tight text-slate-900 sm:text-5xl-pro lg:text-6xl-pro leading-tight animate-fade-in-up delay-100">
+            Real experiences from the <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">RUBY Science Academy community.</span>
           </h2>
         </div>
 

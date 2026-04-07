@@ -106,7 +106,7 @@ export function GallerySection({ items }: GallerySectionProps) {
             <span className="inline-block px-4 py-2 rounded-full-pro text-xs-pro font-bold uppercase tracking-widest bg-blue-100 text-blue-700 border border-blue-200 shadow-sm-pro">
               Life At The Institute
             </span>
-            <h2 className="text-3xl-pro sm:text-4xl-pro lg:text-5xl-pro font-black text-slate-900 leading-tight font-display">
+            <h2 className="text-3xl-pro font-black text-slate-900 sm:text-5xl-pro lg:text-6xl-pro leading-tight font-display">
               A Dynamic <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Learning Environment</span>
             </h2>
             <p className="text-base-pro leading-relaxed text-slate-600 max-w-lg">

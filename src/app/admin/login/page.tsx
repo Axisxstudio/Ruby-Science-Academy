@@ -31,7 +31,7 @@ export default async function AdminLoginPage() {
               Restricted Administrative Access
             </h1>
             <p className="mt-6 max-w-lg text-base font-bold leading-relaxed text-white/50 tracking-wide uppercase">
-              This environment is for authorized Ruby Science Academy personnel only. 
+              This environment is for authorized Ruby Science Academy personnel only.
               All sessions are monitored and logged for security and system integrity.
             </p>
             <div className="mt-8 flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-cyan/60">

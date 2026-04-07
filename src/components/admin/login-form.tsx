@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { LockKeyhole } from "lucide-react";
+import { ArrowLeft, LockKeyhole } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -48,7 +49,7 @@ export function AdminLoginForm() {
         </div>
         <CardTitle>Admin Login</CardTitle>
         <CardDescription>
-          Sign in with your Supabase admin account to manage site content.
+          Sign in with your authorized admin account to manage site content securely.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -74,6 +75,14 @@ export function AdminLoginForm() {
           <Button type="submit" variant="accent" className="w-full" disabled={isSubmitting}>
             {isSubmitting ? "Signing in..." : "Sign in"}
           </Button>
+
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:text-primary-deep"
+          >
+            <ArrowLeft className="size-4" />
+            Back to website
+          </Link>
         </form>
       </CardContent>
     </Card>
