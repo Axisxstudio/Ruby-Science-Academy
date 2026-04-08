@@ -44,7 +44,7 @@ export function HeroSection({ settings, teachers }: HeroSectionProps) {
         <div className="absolute -bottom-[20%] left-1/2 -translate-x-1/2 w-[80%] h-[40%] bg-cyan/5 rounded-full blur-[160px]" />
       </div>
 
-      <div className="section-shell relative z-10 py-12 lg:py-0 flex items-center min-h-[inherit]">
+      <div className="section-shell relative z-10 pt-[25px] pb-12 lg:pb-0 flex items-center min-h-[inherit]">
         <div className="w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center">
 
           {/* Content Section */}
@@ -131,49 +131,18 @@ export function HeroSection({ settings, teachers }: HeroSectionProps) {
             <div className="absolute inset-x-0 -inset-y-32 bg-cyan/10 blur-[200px] rounded-full scale-90 group-hover:scale-110 transition-transform duration-[2000ms]" />
 
             {/* The Logo - Direct and Floating */}
-            <div className="relative z-10 w-full aspect-square flex items-center justify-center p-12 lg:-mr-12">
-              <div className="relative w-full h-full transition-all duration-[2000ms] hover:scale-105 active:scale-95 animate-float group-hover:drop-shadow-[0_0_120px_rgba(6,182,212,0.4)]">
+            <div className="relative z-10 w-full aspect-square flex items-center justify-center p-2 lg:p-6 lg:-mr-12 animate-in fade-in zoom-in-75 slide-in-from-bottom-20 duration-1000 delay-500">
+              <div className="relative w-full h-full animate-float-premium group-hover:transition-all group-hover:duration-1000 group-hover:drop-shadow-[0_0_120px_rgba(6,182,212,0.4)]">
+                {/* Auto-pulsing Aura Glow behind logo */}
+                <div className="absolute inset-x-0 inset-y-10 bg-cyan blur-[120px] rounded-full animate-pulse-aura -z-10" />
+
                 <Image
                   src="/ruby-science-logo.png"
                   alt="RUBY SCIENCE ACADEMY"
                   fill
-                  className="object-contain drop-shadow-[0_60px_120px_rgba(0,0,0,0.6)] transition-transform duration-1000 ease-out"
+                  className="object-contain drop-shadow-[0_60px_120px_rgba(0,0,0,0.6)] transition-all duration-[2000ms] ease-out hover:scale-105 active:scale-95"
                   priority
                 />
-              </div>
-            </div>
-
-            {/* Floating Stat Card - 95% Pass Rate */}
-            <div className="absolute -top-10 -left-10 w-44 h-auto animate-float-slow z-30 animate-in fade-in zoom-in duration-1000 delay-[1200ms]">
-              <div className="bg-[#0a1628]/95 backdrop-blur-3xl border border-white/10 p-5 rounded-3xl shadow-[0_30px_60px_rgba(0,0,0,0.5)] overflow-hidden group/card relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan/20 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-1000" />
-                <div className="relative z-10 text-center">
-                  <p className="text-3xl font-black text-white tracking-tighter flex items-center justify-center gap-1">
-                    95<span className="text-cyan text-sm font-bold">%</span>
-                  </p>
-                  <p className="text-[9px] font-bold uppercase tracking-widest text-white/40 mt-0.5">Pass Rate</p>
-                  <div className="mt-3 flex items-center justify-center gap-1.5">
-                    <div className="size-1.5 rounded-full bg-cyan animate-pulse shadow-[0_0_8px_rgba(6,182,212,1)]" />
-                    <p className="text-[8px] font-black text-cyan uppercase tracking-widest">Excellence</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Floating Status Badge Card */}
-            <div className="hidden lg:block absolute -bottom-6 -right-2 w-44 h-auto animate-float z-30 animate-in fade-in zoom-in duration-1000 delay-[1500ms] text-black">
-              <div className="bg-white/95 group-hover:bg-white backdrop-blur-3xl border border-white p-4 rounded-3xl shadow-[0_25px_50px_rgba(0,0,0,0.2)] transition-all duration-700">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="px-2 py-0.5 rounded-full bg-cyan/10 text-[7px] font-black text-cyan uppercase tracking-widest leading-none">Registration</span>
-                  <span className="size-1.5 rounded-full bg-green-500 animate-pulse" />
-                </div>
-                <p className="text-base font-black text-slate-900 leading-tight tracking-tight">Open for <br /><span className="text-cyan text-xl">2028 Intake</span></p>
-                <div className="mt-4 flex items-center justify-between gap-2 border-t border-slate-100 pt-4">
-                  <div className="flex -space-x-1.5">
-                    {[1, 2, 3].map(i => <div key={i} className="size-6 rounded-full border-2 border-white bg-slate-200 overflow-hidden shadow-sm" />)}
-                  </div>
-                  <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest">New Batch</p>
-                </div>
               </div>
             </div>
 

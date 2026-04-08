@@ -73,7 +73,7 @@ h6 {
 }
 
 .section-shell {
-  @apply mx-auto w-full max-w-screen-2xl px-8 sm:px-20 lg:px-40 xl:px-56;
+  @apply mx-auto w-full max-w-screen-2xl px-6 sm:px-12 lg:px-24 xl:px-32;
 }
 
 .section-card {
@@ -136,24 +136,23 @@ h6 {
   animation: fade-in 1.4s ease-out forwards;
 }
 
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-12px);
-  }
+@keyframes float-premium {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  33% { transform: translateY(-12px) rotate(1deg) scale(1.05); }
+  66% { transform: translateY(-6px) rotate(-1deg) scale(1.02); }
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+@keyframes pulse-aura {
+  0%, 100% { opacity: 0.05; transform: scale(1); }
+  50% { opacity: 0.15; transform: scale(1.1); }
 }
 
-.animate-float-delayed {
-  animation: float 7s ease-in-out 1.5s infinite;
+.animate-float-premium {
+  animation: float-premium 8s ease-in-out infinite;
+}
+
+.animate-pulse-aura {
+  animation: pulse-aura 6s ease-in-out infinite;
 }
 
 .perspective-1000 {

@@ -150,14 +150,14 @@ export function RegistrationForm() {
                 <div className="grid gap-4">
                   <div className="space-y-1.5">
                     <Label className="text-xs font-bold uppercase tracking-widest text-muted/60 px-1">Full Student Name</Label>
-                    <Input id="fullName" className="h-11 rounded-xl text-sm px-4 border-slate-200 bg-slate-50/50 focus:bg-white focus:ring-primary/20 focus:border-primary/50" {...form.register("fullName")} placeholder="e.g. Malith Perera" />
+                    <Input id="fullName" suppressHydrationWarning className="h-11 rounded-xl text-sm px-4 border-slate-200 bg-slate-50/50 focus:bg-white focus:ring-primary/20 focus:border-primary/50" {...form.register("fullName")} placeholder="e.g. Malith Perera" />
                     {form.formState.errors.fullName ? (
                       <p className="text-xs font-medium text-chemistry px-1">{form.formState.errors.fullName.message}</p>
                     ) : null}
                   </div>
                   <div className="space-y-1.5">
                     <Label className="text-xs font-bold uppercase tracking-widest text-muted/60 px-1">Permanent Contact Number</Label>
-                    <Input id="phoneNumber" className="h-11 rounded-xl text-sm px-4 border-slate-200 bg-slate-50/50 focus:bg-white focus:ring-primary/20 focus:border-primary/50" {...form.register("phoneNumber")} placeholder="e.g. 077 123 4567" />
+                    <Input id="phoneNumber" suppressHydrationWarning className="h-11 rounded-xl text-sm px-4 border-slate-200 bg-slate-50/50 focus:bg-white focus:ring-primary/20 focus:border-primary/50" {...form.register("phoneNumber")} placeholder="e.g. 077 123 4567" />
                     {form.formState.errors.phoneNumber ? (
                       <p className="text-xs font-medium text-chemistry px-1">{form.formState.errors.phoneNumber.message}</p>
                     ) : null}
@@ -171,6 +171,7 @@ export function RegistrationForm() {
                     <Label className="text-xs font-bold uppercase tracking-widest text-muted/60 px-1">Select Batch Type</Label>
                     <Select
                       id="batchType"
+                      suppressHydrationWarning
                       className="h-11 rounded-xl border-slate-200 bg-slate-50/50 text-sm px-4"
                       value={values.batchType}
                       onChange={(event) =>
@@ -188,6 +189,7 @@ export function RegistrationForm() {
                     <Input
                       id="year"
                       type="number"
+                      suppressHydrationWarning
                       min={2026}
                       max={2035}
                       className="h-11 rounded-xl text-sm px-4 border-slate-200 bg-slate-50/50 focus:bg-white"
