@@ -166,7 +166,7 @@ export function AdminShell({ userEmail, children }: AdminShellProps) {
             </div>
           </header>
 
-          <AnimatePresence virtual>
+          <AnimatePresence>
             {open && (
               <>
                 <motion.div 
