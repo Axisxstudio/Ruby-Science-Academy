@@ -82,7 +82,7 @@ export function TestimonialsSection({ feedbacks }: TestimonialsSectionProps) {
 
 
   return (
-    <section id="feedback" className="section-shell py-20 lg:py-28">
+    <section id="feedback" className="section-shell py-12 lg:py-16">
       <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-3xl">
           <span className="inline-block px-4 py-2 rounded-full-pro text-xs-pro font-bold uppercase tracking-[0.2em] bg-blue-100 text-blue-700 border border-blue-200 shadow-sm-pro mb-4">

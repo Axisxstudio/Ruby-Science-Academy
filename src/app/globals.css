@@ -73,7 +73,7 @@ h6 {
 }
 
 .section-shell {
-  @apply mx-auto w-full max-w-screen-2xl px-6 sm:px-12 lg:px-24;
+  @apply mx-auto w-full max-w-screen-2xl px-8 sm:px-20 lg:px-40 xl:px-56;
 }
 
 .section-card {

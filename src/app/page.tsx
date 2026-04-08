@@ -55,9 +55,9 @@ export default async function Home() {
         <LatestPostPopup post={latestPost} />
         <ScrollingBanner phone={settings.contact_phone} />
 
-        <main>
+        <main className="space-y-6 sm:space-y-8 lg:space-y-12 pb-8">
           <SectionReveal threshold={0}>
-            <HeroSection settings={settings} teachers={teachers} />
+             <HeroSection settings={settings} teachers={teachers} />
           </SectionReveal>
 
           <SectionReveal>
@@ -81,57 +81,56 @@ export default async function Home() {
           </SectionReveal>
 
           <SectionReveal>
-            <section className="py-10 sm:py-14">
+            <section className="py-6 sm:py-10">
               <div className="section-shell">
                 <div className="mb-12 max-w-4xl">
                   <span className="inline-block px-4 py-2 rounded-full-pro text-xs-pro font-bold uppercase tracking-[0.2em] bg-blue-100 text-blue-700 border border-blue-200 shadow-sm-pro mb-6">
                     Enroll Now
                   </span>
-                  <h2 className="text-balance font-display text-3xl-pro font-black tracking-tight text-slate-900 sm:text-5xl-pro lg:text-6xl-pro leading-tight animate-fade-in-up delay-100">
+                  <h2 className="text-balance font-display text-4xl-pro font-black tracking-tight text-slate-900 sm:text-5xl-pro lg:text-7xl-pro leading-[1.1] animate-fade-in-up delay-100">
                     A focused learning atmosphere <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">families trust for results.</span>
                   </h2>
-                  <p className="mt-6 max-w-2xl text-base-pro leading-relaxed text-slate-600">
+                  <p className="mt-8 max-w-2xl text-lg-pro leading-relaxed text-slate-600">
                     We are dedicated to creating the ultimate science stream experience with expert Teachers and comprehensive support to ensure every student's success.
                   </p>
                 </div>
 
-                <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+                <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start pt-8">
                   <RegistrationForm />
-                  <Card className="rounded-[1.4rem] overflow-hidden border-0 bg-[linear-gradient(135deg,_#0f4c81_0%,_#0b3558_100%)] text-white shadow-xl-pro lg:sticky lg:top-24">
-                    <CardContent className="h-full p-8 sm:p-10 flex flex-col justify-center">
-                      <div className="flex size-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm mb-6">
-                        <Sparkles className="size-6 text-cyan" />
+                  <Card className="rounded-[2rem] overflow-hidden border-0 bg-[linear-gradient(135deg,_#0f4c81_0%,_#0b3558_100%)] text-white shadow-2xl lg:sticky lg:top-24 mt-12 lg:mt-0">
+                    <CardContent className="h-full p-10 sm:p-12 flex flex-col justify-center">
+                      <div className="flex size-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm mb-8">
+                        <Sparkles className="size-7 text-cyan" />
                       </div>
-                      <p className="text-[10px] font-black uppercase tracking-[0.25em] text-cyan">
+                      <p className="text-[11px] font-black uppercase tracking-[0.3em] text-cyan">
                         Why enroll now
                       </p>
-                      <h3 className="mt-4 font-display text-3xl font-black leading-tight">
+                      <h3 className="mt-6 font-display text-3xl sm:text-4xl font-black leading-tight tracking-tight">
                         Secure your batch early and get a clear weekend study plan from day one.
                       </h3>
-                      <p className="mt-6 leading-relaxed text-white/85">
+                      <p className="mt-8 text-lg-pro leading-relaxed text-white/85">
                         Your registration helps us prepare premium materials and arrange optimal time slots that fit your schedule perfectly.
                       </p>
 
-                      <div className="mt-10 space-y-4">
-                        <div className="flex items-center gap-3">
-                          <div className="size-1.5 rounded-full bg-cyan shadow-[0_0_8px_rgba(6,182,212,0.8)]" />
-                          <p className="text-sm font-semibold">Priority Batch Selection</p>
+                      <div className="mt-12 space-y-5">
+                        <div className="flex items-center gap-4">
+                          <div className="size-2 rounded-full bg-cyan shadow-[0_0_12px_rgba(6,182,212,0.8)]" />
+                          <p className="text-base font-bold">Priority Batch Selection</p>
                         </div>
-                        <div className="flex items-center gap-3">
-                          <div className="size-1.5 rounded-full bg-cyan shadow-[0_0_8px_rgba(6,182,212,0.8)]" />
-                          <p className="text-sm font-semibold">Personalized Study Materials</p>
+                        <div className="flex items-center gap-4">
+                          <div className="size-2 rounded-full bg-cyan shadow-[0_0_12px_rgba(6,182,212,0.8)]" />
+                          <p className="text-base font-bold">Personalized Study Materials</p>
                         </div>
-                        <div className="flex items-center gap-3">
-                          <div className="size-1.5 rounded-full bg-cyan shadow-[0_0_8px_rgba(6,182,212,0.8)]" />
-                          <p className="text-sm font-semibold">Direct Teacher Mentoring</p>
+                        <div className="flex items-center gap-4">
+                          <div className="size-2 rounded-full bg-cyan shadow-[0_0_12px_rgba(6,182,212,0.8)]" />
+                          <p className="text-base font-bold">Direct Teacher Mentoring</p>
                         </div>
                       </div>
 
-                      <div className="mt-10">
-                        <Button asChild size="lg" className="rounded-full h-12 px-8 bg-white text-primary font-bold hover:bg-white/90 transition-all-smooth w-fit">
+                      <div className="mt-12">
+                        <Button asChild size="lg" className="rounded-2xl h-[60px] px-10 bg-white text-primary font-black uppercase tracking-widest text-xs hover:bg-white/90 transition-all duration-300 w-fit shadow-xl hover:scale-105 active:scale-95">
                           <a href="#contact">
-                            Need help before enrolling?
-                            <ArrowRight className="size-4 ml-2" />
+                            Need help? <ArrowRight className="size-4 ml-3" />
                           </a>
                         </Button>
                       </div>

@@ -57,7 +57,7 @@ export function ContactSection({ settings }: ContactSectionProps) {
   };
 
   return (
-    <section id="contact" className="section-shell py-20 lg:py-28">
+    <section id="contact" className="section-shell py-12 lg:py-16">
       <div className="mb-12 max-w-3xl animate-fade-in-up">
         <span className="inline-block px-4 py-2 rounded-full-pro text-xs-pro font-bold uppercase tracking-[0.2em] bg-blue-100 text-blue-700 border border-blue-200 shadow-sm-pro">
           Contact Details
