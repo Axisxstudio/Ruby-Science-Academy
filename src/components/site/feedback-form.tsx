@@ -259,15 +259,13 @@ export function FeedbackForm() {
               Back
             </Button>
             {step < stepLabels.length - 1 ? (
-              <Button type="button" size="sm" className="rounded-full px-6 font-black" onClick={nextStep}>
+              <Button type="button" className="h-10 bg-gradient-to-r from-cyan to-bright-blue hover:from-cyan/90 hover:to-bright-blue/90 text-white shadow-[0_10px_20px_rgba(6,182,212,0.2)] transition-all duration-500 hover:scale-[1.05] active:scale-95 px-8 text-[11px] font-black uppercase tracking-widest rounded-full overflow-hidden" onClick={nextStep}>
                 Continue
               </Button>
             ) : (
               <Button
                 type="submit"
-                variant="accent"
-                size="sm"
-                className="rounded-full px-6 font-black bg-gradient-to-r from-cyan to-bright-blue transition-all-smooth"
+                className="h-10 bg-gradient-to-r from-cyan to-bright-blue hover:from-cyan/90 hover:to-bright-blue/90 text-white shadow-[0_10px_20px_rgba(6,182,212,0.2)] transition-all duration-500 hover:scale-[1.05] active:scale-95 px-8 text-[11px] font-black uppercase tracking-widest rounded-full overflow-hidden group"
                 disabled={isSubmitting || !canSubmit}
               >
                 {isSubmitting ? (

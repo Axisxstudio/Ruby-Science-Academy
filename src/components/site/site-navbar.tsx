@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Menu, X, Home, BookOpen, Users, Calendar, 
-  Trophy, Image as ImageIcon, MessageSquare, 
+import {
+  Menu, X, Home, BookOpen, Users, Calendar,
+  Trophy, Image as ImageIcon, MessageSquare,
   Phone, Sparkles, ArrowRight
 } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -58,7 +58,7 @@ export function SiteNavbar() {
 
   return (
     <>
-      <header 
+      <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           scrolled ? "bg-white/80 backdrop-blur-lg shadow-md h-16" : "bg-white h-20"
@@ -128,12 +128,12 @@ export function SiteNavbar() {
             className="fixed inset-0 z-[100] lg:hidden"
           >
             {/* Backdrop Blur Overlay */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setOpen(false)}
-              className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" 
+              className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
             />
 
             {/* Content Drawer */}
@@ -141,61 +141,75 @@ export function SiteNavbar() {
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ 
-                type: "spring", 
-                damping: 25, 
+              transition={{
+                type: "spring",
+                damping: 25,
                 stiffness: 200,
                 mass: 0.8
               }}
-              className="absolute inset-0 h-full w-full bg-white flex flex-col shadow-2xl"
+              className="absolute inset-0 h-full w-full bg-white flex flex-col shadow-2xl overflow-y-auto"
             >
+              {/* Header inside drawer */}
               <div className="flex h-20 items-center justify-between border-b border-slate-50 px-6 shrink-0">
                 <div className="flex items-center gap-3">
-                  <div className="size-8 overflow-hidden rounded-lg">
-                    <Image src="/ruby-logo.jpeg" alt="Logo" width={32} height={32} />
+                  <div className="size-10 overflow-hidden rounded-xl border border-primary/10 shadow-sm">
+                    <Image src="/ruby-logo.jpeg" alt="Logo" width={40} height={40} className="w-full h-full object-cover" />
                   </div>
                   <div>
-                    <p className="font-display text-sm font-black text-primary leading-none uppercase tracking-tight">RUBY</p>
-                    <p className="font-display text-[9px] font-black text-cyan uppercase tracking-widest mt-0.5 whitespace-nowrap">Science Academy</p>
+                    <p className="font-display text-base font-black text-primary leading-none uppercase tracking-tight">RUBY</p>
+                    <p className="font-display text-[10px] font-black text-cyan uppercase tracking-widest mt-1 whitespace-nowrap">Science Academy</p>
                   </div>
                 </div>
                 <button
                   onClick={() => setOpen(false)}
-                  className="size-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-500 hover:bg-slate-100 transition-colors"
+                  className="size-12 flex items-center justify-center rounded-2xl bg-slate-50 text-slate-500 hover:bg-slate-100 transition-colors border border-slate-100"
                 >
-                  <X className="size-5" />
+                  <X className="size-6" />
                 </button>
               </div>
 
-              <div className="flex-1 overflow-hidden pt-6 pb-32 px-6">
-                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan/70 mb-6 font-sans">Navigation Menu</p>
-                
-                <nav className="space-y-1">
-                  {navLinks.map((link) => {
+              {/* Navigation Links */}
+              <div className="flex-1 px-6 py-8 flex flex-col justify-between">
+                <nav className="flex flex-col gap-3">
+                  {navLinks.map((link, i) => {
                     const Icon = link.icon;
                     return (
-                      <Link
+                      <motion.div
                         key={link.href}
-                        href={link.href}
-                        onClick={() => setOpen(false)}
-                        className="group flex items-center justify-between rounded-2xl p-3 text-slate-700 transition-all hover:bg-blue-50 hover:text-blue-600 border border-transparent hover:border-blue-100"
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: i * 0.05 }}
                       >
-                        <div className="flex items-center gap-4">
-                          <div className="flex size-10 items-center justify-center rounded-xl bg-slate-50 text-slate-400 group-hover:bg-white group-hover:text-blue-500 transition-colors shadow-sm">
-                            <Icon className="size-5" />
+                        <Link
+                          href={link.href}
+                          onClick={() => setOpen(false)}
+                          className="group flex items-center gap-4 rounded-2xl p-4 text-slate-700 transition-all hover:bg-primary/5 hover:translate-x-2 border border-slate-50 hover:border-primary/10"
+                        >
+                          <div className="flex size-12 items-center justify-center rounded-xl bg-slate-50 text-slate-400 group-hover:bg-primary group-hover:text-white transition-all shadow-sm border border-slate-100 group-hover:border-primary">
+                            <Icon className="size-6" />
                           </div>
-                          <span className="text-lg font-medium tracking-tight font-sans">{link.label}</span>
-                        </div>
-                        <ArrowRight className="size-5 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
-                      </Link>
+                          <span className="text-lg font-bold tracking-tight text-primary-deep uppercase">{link.label}</span>
+                        </Link>
+                      </motion.div>
                     );
                   })}
                 </nav>
 
-                <div className="mt-8 mb-12">
-                  <Button asChild className="w-full h-16 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 font-bold text-xl shadow-xl font-sans" onClick={() => setOpen(false)}>
-                    <Link href="/#registration">Enroll Now</Link>
+                <div className="mt-8 pt-8 border-t border-slate-50 pb-12">
+                  <Button
+                    asChild
+                    className="w-full h-16 rounded-full bg-gradient-to-r from-bright-blue to-cyan font-black text-lg shadow-xl shadow-bright-blue/20 uppercase tracking-widest"
+                    onClick={() => setOpen(false)}
+                  >
+                    <Link href="/#registration" className="flex items-center justify-center gap-2">
+                      Enroll Now
+                      <ArrowRight className="size-5" />
+                    </Link>
                   </Button>
+                  
+                  <p className="text-center mt-6 text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">
+                    © 2026 Ruby Science Academy
+                  </p>
                 </div>
               </div>
             </motion.div>

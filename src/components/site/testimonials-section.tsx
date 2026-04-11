@@ -96,7 +96,9 @@ export function TestimonialsSection({ feedbacks }: TestimonialsSectionProps) {
         <div className="flex flex-col gap-3 sm:flex-row">
           <Dialog>
             <DialogTrigger asChild>
-              <Button>Share Your Feedback</Button>
+              <Button className="h-12 bg-gradient-to-r from-cyan to-bright-blue hover:from-cyan/90 hover:to-bright-blue/90 text-white shadow-[0_15px_30px_rgba(6,182,212,0.25)] transition-all duration-500 hover:scale-[1.05] active:scale-95 px-8 text-[11px] font-black uppercase tracking-widest rounded-full overflow-hidden">
+                Share Your Feedback
+              </Button>
             </DialogTrigger>
             <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto border-0 p-5">
               <FeedbackForm />
