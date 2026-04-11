@@ -55,7 +55,10 @@ function TeacherCard({ teacher, index }: { teacher: Teacher; index: number }) {
       )}
     >
       {/* Header-like Badge (Subject) */}
-      <div className="absolute top-5 left-5 z-20">
+      <div 
+        suppressHydrationWarning
+        className="absolute top-5 left-5 z-20"
+      >
         <div className="px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.25em] shadow-sm rounded-full bg-[#f5f5f5]/30 backdrop-blur-md border border-white/20 text-slate-900">
           {teacher.subject}
         </div>
@@ -63,6 +66,7 @@ function TeacherCard({ teacher, index }: { teacher: Teacher; index: number }) {
 
       {/* Mobile View Toggle */}
       <button 
+        suppressHydrationWarning
         onClick={() => setIsOpen(!isOpen)}
         className="lg:hidden absolute top-5 right-5 z-20 p-2.5 rounded-full bg-slate-900/40 backdrop-blur-md border border-white/20 text-white transition-all active:scale-95"
       >

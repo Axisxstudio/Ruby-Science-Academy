@@ -70,27 +70,38 @@ export function ContactSection({ settings }: ContactSectionProps) {
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <Card className="animate-fade-in-up delay-300">
           <CardContent className="space-y-6 p-6">
-            <div className="flex gap-4">
-              <MapPin className="mt-1 size-5 text-cyan" />
+            <a 
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(settings.contact_address)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-4 group hover:bg-slate-50 p-2 -m-2 rounded-xl transition-colors"
+            >
+              <MapPin className="mt-1 size-5 text-cyan shrink-0 transition-transform group-hover:scale-110" />
               <div>
                 <p className="font-semibold text-primary">Address</p>
-                <p className="mt-1 leading-7 text-muted">{settings.contact_address}</p>
+                <p className="mt-1 leading-7 text-muted group-hover:text-blue-600 transition-colors">{settings.contact_address}</p>
               </div>
-            </div>
-            <div className="flex gap-4">
-              <Phone className="mt-1 size-5 text-cyan" />
+            </a>
+            <a 
+              href={`tel:${settings.contact_phone}`}
+              className="flex gap-4 group hover:bg-slate-50 p-2 -m-2 rounded-xl transition-colors"
+            >
+              <Phone className="mt-1 size-5 text-cyan shrink-0 transition-transform group-hover:scale-110" />
               <div>
                 <p className="font-semibold text-primary">Phone</p>
-                <p className="mt-1 leading-7 text-muted">{settings.contact_phone}</p>
+                <p className="mt-1 leading-7 text-muted group-hover:text-blue-600 transition-colors">{settings.contact_phone}</p>
               </div>
-            </div>
-            <div className="flex gap-4">
-              <Mail className="mt-1 size-5 text-cyan" />
+            </a>
+            <a 
+              href={`mailto:${settings.contact_email}`}
+              className="flex gap-4 group hover:bg-slate-50 p-2 -m-2 rounded-xl transition-colors"
+            >
+              <Mail className="mt-1 size-5 text-cyan shrink-0 transition-transform group-hover:scale-110" />
               <div>
                 <p className="font-semibold text-primary">Email</p>
-                <p className="mt-1 leading-7 text-muted">{settings.contact_email}</p>
+                <p className="mt-1 leading-7 text-muted group-hover:text-blue-600 transition-colors">{settings.contact_email}</p>
               </div>
-            </div>
+            </a>
 
             <div className="flex flex-wrap gap-3">
               <Button asChild className="rounded-full px-8 h-12 bg-[#25D366] hover:bg-[#20ba5a] text-white shadow-[0_12px_24px_rgba(37,211,102,0.25)] border-0 transition-all duration-300 hover:scale-[1.03] active:scale-95">
@@ -169,20 +180,20 @@ export function ContactSection({ settings }: ContactSectionProps) {
             </form>
 
             <div className="mt-5 pt-5 border-t border-border-soft grid grid-cols-2 gap-4">
-              <div className="flex items-start gap-2">
-                <Phone className="mt-0.5 size-4 text-cyan shrink-0" />
+              <a href={`tel:${settings.contact_phone}`} className="flex items-start gap-2 group transition-colors hover:bg-slate-50 p-1.5 -m-1.5 rounded-lg">
+                <Phone className="mt-0.5 size-4 text-cyan shrink-0 transition-transform group-hover:scale-110" />
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-widest text-muted/50">Phone</p>
-                  <p className="text-sm font-semibold text-primary mt-0.5">{settings.contact_phone}</p>
+                  <p className="text-sm font-semibold text-primary mt-0.5 group-hover:text-blue-600 transition-colors">{settings.contact_phone}</p>
                 </div>
-              </div>
-              <div className="flex items-start gap-2">
-                <Mail className="mt-0.5 size-4 text-cyan shrink-0" />
+              </a>
+              <a href={`mailto:${settings.contact_email}`} className="flex items-start gap-2 group transition-colors hover:bg-slate-50 p-1.5 -m-1.5 rounded-lg">
+                <Mail className="mt-0.5 size-4 text-cyan shrink-0 transition-transform group-hover:scale-110" />
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-widest text-muted/50">Email</p>
-                  <p className="text-sm font-semibold text-primary mt-0.5 break-all">{settings.contact_email}</p>
+                  <p className="text-sm font-semibold text-primary mt-0.5 break-all group-hover:text-blue-600 transition-colors">{settings.contact_email}</p>
                 </div>
-              </div>
+              </a>
             </div>
           </CardContent>
         </Card>

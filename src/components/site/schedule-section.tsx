@@ -12,6 +12,11 @@ interface ScheduleSectionProps {
 
 export function ScheduleSection({ schedules }: ScheduleSectionProps) {
   const [activeDay, setActiveDay] = useState('Saturday');
+  const [todayName, setTodayName] = useState<string>("");
+
+  useEffect(() => {
+    setTodayName(new Date().toLocaleDateString('en-US', { weekday: 'long' }));
+  }, []);
 
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
@@ -139,11 +144,11 @@ export function ScheduleSection({ schedules }: ScheduleSectionProps) {
                     const daySchedules = getDaySchedules(day);
                     const hasClasses = daySchedules.length > 0;
                     const isActive = activeDay === day;
-                    const isToday = new Date().toLocaleDateString('en-US', { weekday: 'long' }) === day;
 
                     return (
                       <button
                         key={day}
+                        suppressHydrationWarning
                         onClick={() => hasClasses && setActiveDay(day)}
                         disabled={!hasClasses}
                         className={`
@@ -154,7 +159,7 @@ export function ScheduleSection({ schedules }: ScheduleSectionProps) {
                               ? 'bg-white text-slate-700 border border-slate-200 hover:border-blue-300 hover:bg-blue-50'
                               : 'bg-slate-100 text-slate-400 cursor-not-allowed'
                           }
-                          ${isToday && hasClasses ? 'ring-2 ring-blue-400 ring-offset-2' : ''}
+                          ${todayName === day && hasClasses ? 'ring-2 ring-blue-400 ring-offset-2' : ''}
                         `}
                       >
                         <span className="relative z-10">{day.slice(0, 3)}</span>
@@ -163,7 +168,7 @@ export function ScheduleSection({ schedules }: ScheduleSectionProps) {
                             {daySchedules.length}
                           </span>
                         )}
-                        {isToday && hasClasses && (
+                        {todayName === day && hasClasses && (
                           <span className="absolute -top-1 -left-1 w-2 h-2 rounded-full-pro bg-green-500 border border-white"></span>
                         )}
                       </button>

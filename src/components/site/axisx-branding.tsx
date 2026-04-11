@@ -84,6 +84,7 @@ export function AxisXBranding() {
               width={120}
               height={40}
               className="object-contain"
+              style={{ width: "auto" }}
             />
           </div>
 

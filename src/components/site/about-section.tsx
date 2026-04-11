@@ -118,7 +118,10 @@ export function AboutSection() {
                   Join hundreds of successful students who have achieved their dreams through our proven methodology.
                 </p>
                 <div className="pt-2">
-                  <button className="inline-flex items-center gap-2 px-6 py-3 rounded-xl-pro bg-white text-blue-600 font-bold text-sm-pro transition-all-smooth hover:bg-white/90 hover-lift">
+                  <button 
+                    suppressHydrationWarning
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl-pro bg-white text-blue-600 font-bold text-sm-pro transition-all-smooth hover:bg-white/90 hover-lift"
+                  >
                     Learn More About Our Approach
                   </button>
                 </div>

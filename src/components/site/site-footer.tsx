@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { LogIn, Mail, MapPin, Phone } from "lucide-react";
+import { Lock, Mail, MapPin, Phone } from "lucide-react";
 import { AxisXBranding } from "@/components/site/axisx-branding";
 import type { SiteSettings } from "@/lib/types";
 
@@ -25,18 +25,20 @@ export function SiteFooter({ settings }: SiteFooterProps) {
     <footer className="bg-[linear-gradient(180deg,_#0f4c81,_#0b3558)] py-12 text-white">
       <div className="section-shell grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_0.9fr]">
         <div>
+        <div className="flex items-center gap-4 mb-6">
           <Image
             src="/ruby-logo.jpeg"
             alt="RUBY Science Academy logo"
-            width={60}
-            height={60}
-            className="mb-4 rounded-xl border border-white/20 shadow-lg"
+            width={56}
+            height={56}
+            className="rounded-xl border border-white/20 shadow-lg"
           />
-          <p className="font-display text-2xl font-extrabold uppercase tracking-tight">
-            RUBY Science
+          <p className="font-display text-xl sm:text-2xl font-extrabold uppercase tracking-tight leading-none">
+            RUBY
             <br />
-            Academy
+            <span className="text-lg sm:text-xl text-white/80">Science Academy</span>
           </p>
+        </div>
           <p className="mt-4 max-w-lg leading-7 text-white/75">
             Top Tamil medium A/L science classes in Colombo Kotahena for students who want better guidance and clear
             results.
@@ -62,29 +64,29 @@ export function SiteFooter({ settings }: SiteFooterProps) {
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan">Contact</p>
           <div className="mt-4 space-y-3 text-sm text-white/75">
-            <div className="flex gap-3">
-              <MapPin className="mt-0.5 size-4 shrink-0 text-cyan" />
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(settings.contact_address)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition hover:text-white hover:underline"
-              >
-                {settings.contact_address}
-              </a>
-            </div>
-            <div className="flex gap-3">
-              <Phone className="mt-0.5 size-4 shrink-0 text-cyan" />
-              <a href={`tel:${settings.contact_phone}`} className="transition hover:text-white hover:underline">
-                {settings.contact_phone}
-              </a>
-            </div>
-            <div className="flex gap-3">
-              <Mail className="mt-0.5 size-4 shrink-0 text-cyan" />
-              <a href={`mailto:${settings.contact_email}`} className="transition hover:text-white hover:underline">
-                {settings.contact_email}
-              </a>
-            </div>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(settings.contact_address)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex gap-3 transition-colors hover:text-white"
+            >
+              <MapPin className="mt-0.5 size-4 shrink-0 text-cyan transition-transform group-hover:scale-110" />
+              <span>{settings.contact_address}</span>
+            </a>
+            <a 
+              href={`tel:${settings.contact_phone}`} 
+              className="group flex gap-3 transition-colors hover:text-white"
+            >
+              <Phone className="mt-0.5 size-4 shrink-0 text-cyan transition-transform group-hover:scale-110" />
+              <span>{settings.contact_phone}</span>
+            </a>
+            <a 
+              href={`mailto:${settings.contact_email}`} 
+              className="group flex gap-3 transition-colors hover:text-white"
+            >
+              <Mail className="mt-0.5 size-4 shrink-0 text-cyan transition-transform group-hover:scale-110" />
+              <span>{settings.contact_email}</span>
+            </a>
             <div className="flex gap-3">
               <svg viewBox="0 0 24 24" className="mt-0.5 size-4 shrink-0 fill-cyan" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -149,7 +151,7 @@ export function SiteFooter({ settings }: SiteFooterProps) {
           className="group flex items-center gap-2 transition-colors hover:text-white"
           title="Admin Login"
         >
-          <LogIn className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+          <Lock className="size-3.5 transition-transform group-hover:translate-x-0.5" />
           <span className="sr-only sm:not-sr-only sm:inline-block">Admin Login</span>
         </Link>
       </div>

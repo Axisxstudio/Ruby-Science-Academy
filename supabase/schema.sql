@@ -149,6 +149,31 @@ alter table public.feedbacks enable row level security;
 alter table public.gallery_items enable row level security;
 alter table public.results_achievements enable row level security;
 alter table public.contact_messages enable row level security;
+alter table public.posts enable row level security;
+
+-- Posts table definition
+create table if not exists public.posts (
+  id uuid primary key default gen_random_uuid(),
+  image_url text not null,
+  media_path text,
+  description text not null,
+  active_status boolean not null default true,
+  created_at timestamptz not null default timezone('utc', now())
+);
+
+-- Posts RLS Policies
+drop policy if exists "posts public read" on public.posts;
+create policy "posts public read"
+on public.posts
+for select
+using (active_status = true);
+
+drop policy if exists "posts admin manage" on public.posts;
+create policy "posts admin manage"
+on public.posts
+for all
+using (public.is_admin())
+with check (public.is_admin());
 
 drop policy if exists "site_settings public read" on public.site_settings;
 create policy "site_settings public read"

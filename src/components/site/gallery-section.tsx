@@ -138,6 +138,7 @@ export function GallerySection({ items }: GallerySectionProps) {
                 <div
                   role="button"
                   tabIndex={0}
+                  suppressHydrationWarning
                   onClick={() => setActiveIndex(index)}
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}

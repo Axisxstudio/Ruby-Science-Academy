@@ -62,7 +62,7 @@ export function HeroSection({ settings, teachers }: HeroSectionProps) {
                 <div className="text-[10px] sm:text-xs font-black text-cyan uppercase tracking-[0.4em] animate-in fade-in slide-in-from-left-4 duration-700 delay-150">
                   <Typewriter text="Welcome to RUBY SCIENCE ACADEMY" speed={60} delay={500} />
                 </div>
-                <h1 className="text-3xl sm:text-5xl lg:text-[72px] font-black tracking-tighter leading-[0.95] text-white animate-in fade-in slide-in-from-left-4 duration-1000 delay-300">
+                <h1 className="text-5xl sm:text-7xl lg:text-[88px] font-black tracking-tighter leading-[0.9] text-white animate-in fade-in slide-in-from-left-4 duration-1000 delay-300">
                   2028 A/L <br />
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-cyan/80 drop-shadow-sm">
                     Science Stream
@@ -81,12 +81,12 @@ export function HeroSection({ settings, teachers }: HeroSectionProps) {
 
             <div className="flex flex-col gap-10 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-700">
               <div className="flex flex-col sm:flex-row gap-4 items-center">
-                <Button asChild size="lg" className="h-[60px] bg-gradient-to-r from-cyan to-bright-blue hover:from-cyan/90 hover:to-bright-blue/90 text-white shadow-[0_20px_40px_rgba(6,182,212,0.3)] transition-all duration-500 hover:scale-[1.05] active:scale-95 px-12 text-xs font-black uppercase tracking-widest rounded-2xl w-full sm:w-auto overflow-hidden group">
+                <Button asChild size="lg" className="h-[60px] bg-gradient-to-r from-cyan to-bright-blue hover:from-cyan/90 hover:to-bright-blue/90 text-white shadow-[0_20px_40px_rgba(6,182,212,0.3)] transition-all duration-500 hover:scale-[1.05] active:scale-95 px-12 text-xs font-black uppercase tracking-widest rounded-full w-full sm:w-auto overflow-hidden group">
                   <Link href="#registration" className="relative z-10 flex items-center">
                     Join Now <ArrowRight className="size-4 ml-3 group-hover:translate-x-1.5 transition-transform" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="h-[60px] bg-white/5 backdrop-blur-md border-white/10 text-white hover:bg-white/10 transition-all duration-300 px-12 text-xs font-black uppercase tracking-widest rounded-2xl border-2 w-full sm:w-auto">
+                <Button asChild size="lg" variant="outline" className="h-[60px] bg-white/5 backdrop-blur-md border-white/10 text-white hover:bg-white/10 transition-all duration-300 px-12 text-xs font-black uppercase tracking-widest rounded-full border-2 w-full sm:w-auto">
                   <Link href="#schedule">View Schedule</Link>
                 </Button>
               </div>
